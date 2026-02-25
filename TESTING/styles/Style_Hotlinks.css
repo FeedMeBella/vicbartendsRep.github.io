@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'VA-11 Hall-A 6px Non-mono';
+    src: url("font/VA-11Hall-A6pxNon-mono.eot");
+    src: url("font/VA-11Hall-A6pxNon-mono.eot") format('embedded-opentype'),
+        url("font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
+        url("font/VA-11Hall-A6pxNon-mono.woff") format('woff'),
+        url("font/VA-11Hall-A6pxNon-mono.svg") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body, html {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+a, p, h1, figcaption, em, li{
+  text-decoration: none;
+  font-family: "VA-11 Hall-A 6px Non-mono";
+}
+
+.LOGO{
+  position: fixed;
+  top: 2%;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.LOGO img{
+  position: absolute;
+  height: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  transition: all 0.3s ease;   
+}
+.back2index{
+  position: fixed;
+  top: 2%;
+  left: 0%;
+  z-index: 999;
+}
+.back2index img{
+  height: 15vh;
+  width: auto;
+}
+
+.Hotlinks {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/The evils of mankind.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100vh; 
+  background-color: black;   
+}
+.HOTLOGO{
+  position: fixed;
+  top: 0%;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.HOTLOGO img{
+  position: absolute;
+  height: 70%;
+  right: 50%;
+  top: 0%;
+  transform: translateX(50%);
+  z-index: 1;
+}
+.hotback2index{
+  position: fixed;
+  top: 2%;
+  left: 1%;
+  z-index: 999;
+}
+.hotback2index img{
+  height: 15vh;
+  width: auto;
+}
+.Firesofhell{
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Firesofhell img{
+  max-width: 150vh;
+  width: 100%;
+  height: auto;
+}
+.hot-wrapper{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.hotsailor{
+  position: relative;
+  width: 25%;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hotsailor img{
+  width: 300px;
+}
+.randombutton{
+  position: relative;
+  width: 25%;
+  top: 15%;
+  margin: 0 auto;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(100deg, #7b00ff, #68ff5a);
+  border: none;
+}
+.randombutton:hover {
+  background: linear-gradient(135deg, #ff0000, #04ffff);
+  box-shadow: 0 6px 16px rgba(38, 117, 252, 0.6);
+}
+.Hottitle{
+  position: relative;
+  list-style: none;
+  width: 100vw;
+  top: 15%;
+  text-align: center;
+  color: #49f9ff;
+  text-shadow: 2px 2px 4px #ff0000;
+}
+.Hotlist {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  max-width: 150vh;
+  top: 15%;
+  margin: 0 auto;
+}
+.Hotlist li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Hotlist a {
+  color: #ffe600;  
+  text-shadow: -1px 2px 2px #ff9d9d;   
+  font-style: bold;
+  font-size: larger;
+  text-decoration: underline;
+}
+.Hotlist .description {
+  padding-left: 1%;
+  color: #ffffff;
+  text-shadow: -2px 2px 1px #000000;
+}
+
+
+/* Tablet Mode */
+@media (max-aspect-ratio: 1) {
+  .back2index{
+    top: 2%;
+  }
+  .back2index img{
+    height: 13vh;
+  }
+
+  .HOTLOGO{
+    right: 0%;
+    height: 17vh;
+    width: 100vw;
+  }
+  .HOTLOGO img{
+    right: 0%;
+    transform: translateX(0%);
+    z-index: 1;
+    height: 100%;
+    max-width: 60%;
+  }
+  .hotback2index img{
+    height: 13vh;
+    max-width: 40vw;
+  }
+  .randombutton{
+    width: 60%;
+  }
+  .Hotlist li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25em;
+  }
+  .hotsailor{
+    left: 0%;
+    transform: translateX(0%);
+  }
+  .hotsailor img{
+    width: 300px;
+  }
+  .Hottitle{
+    position: relative;
+    list-style: none;
+    width: 100vw;
+    font-size: 7vw;
+    top: 15%;
+    text-align: center;
+    color: #49f9ff;
+    text-shadow: 2px 2px 4px #ff0000;
+  }
+}
+
+/* Mobile Mode */
+@media (max-aspect-ratio: 0.58) {
+  .LOGO{
+    height: 24vw;
+  }
+  .back2index{
+    top: 1%;
+  }
+  .back2index img{
+    height: 22vw;
+  }
+  .Hotlist {
+    padding: 0;
+  }
+}
+
+/* scrolbar */
+.hot-wrapper::-webkit-scrollbar {
+  width: 1vh;
+}
+.hot-wrapper::-webkit-scrollbar-track {
+  background: rgb(0, 19, 6); 
+}
+.hot-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 38, 0, 0.6); 
+  border: 0.1vw solid rgba(252, 206, 25, 0.2);
+}
+.hot-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(73, 0, 0, 0.27);
+}

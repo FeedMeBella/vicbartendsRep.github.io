@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'VA-11 Hall-A 6px Non-mono';
+    src: url("../font/va-11-hall-a-6px-non-mono.ttf") format('truetype'),
+        url("../font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
+        url("../font/VA-11Hall-A6pxNon-mono.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body, html {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    cursor: url(../assets/CursorAbout.cur), default;
+}
+a, p, h1, figcaption, em, li{
+  text-decoration: none;
+  font-family: "VA-11 Hall-A 6px Non-mono";
+}
+
+.LOGO{
+  position: fixed;
+  top: 2%;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.LOGO img{
+  position: absolute;
+  height: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  transition: all 0.3s ease;   
+}
+.back2index{
+  position: fixed;
+  top: 2%;
+  left: 0%;
+  z-index: 999;
+}
+.back2index img{
+  height: 15vh;
+  width: auto;
+}
+
+.About {
+  background-color: rgb(230, 186, 23); 
+}
+#ABOUT-LOGO {
+  z-index: 3;
+}
+#ABOUT-LOGO img {
+  position: absolute;
+  height: 90%;
+  right: 0%;
+  transform: translateX(0%);
+  transition: all 0.3s ease;
+}
+.About-scroll-area{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100dvh;
+}
+.About-wrapper{
+  position: relative;
+  width: 100vw;
+  bottom: 0%;
+  z-index: 2;
+}
+.About-text{
+  padding-top: 20dvh;
+  padding-right: 4.5%;
+  padding-left: 4.5%;
+}
+.About-text h1{
+  display: block;
+  color: #cb1168;
+  font-weight: bolder;
+  text-align: center;
+}
+.About-text p{
+  color: #541f26;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.About-text em{
+  color: #684242;
+  font-weight: normal;
+}
+.About-text li{
+  color: #87343f;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.About-link{
+  color: #963333;
+  text-decoration: underline;
+}
+.About-link:hover{
+  color: #c35303;
+}
+.poem{
+  display: block;
+  text-align: center;
+}
+.ContactCredits{
+  display: block;
+  text-align: center;
+}
+.ContactCredits p{
+  margin: 1.5% 0%;
+}
+.BGS1, .BGS2, .BGS3, .BGS4, .BGS5,
+.BGS6, .BGS7, .BGS8, .BGS9, .BGS10 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0.2;
+  z-index: 1;
+}
+.BGS1{
+  background-color: #cbb01b;
+  height: 92vh;
+  width: 95vw;
+  animation: spin 3825s linear infinite;
+}
+.BGS2{
+  background-color: #b9ab22;
+  height: 84vh;
+  width: 86vw;
+  animation: spin 2550s linear infinite;
+}
+.BGS3{
+  background-color: #a7a123;
+  height: 76vh;
+  width: 76.5vw;
+  animation: spin 1700s linear infinite;
+}
+.BGS4{
+  background-color: #939d22;
+  height: 68vh;
+  width: 67vw;
+  animation: spin 1125s linear infinite;
+}
+.BGS5{
+  background-color: #799d22;
+  height: 60vh;
+  width: 57.5vw;
+  animation: spin 750s linear infinite;
+}
+.BGS6{
+  background-color: #5e9d22;
+  height: 52vh;
+  width: 48vw;
+  animation: spin 500s linear infinite;
+}
+.BGS7{
+  background-color: #339d22;
+  height: 44vh;
+  width: 38.5vw;
+  animation: spin 335s linear infinite;
+}
+.BGS8{
+  background-color: #259230;
+  height: 36vh;
+  width: 29vw;
+  animation: spin 225s linear infinite;
+}
+.BGS9{
+  background-color: #259248;
+  height: 28vh;
+  width: 19.5vw;
+  animation: spin 150s linear infinite;
+}
+.BGS10{
+  background-color: #21885f;
+  height: 20vh;
+  width: 10vw;
+  animation: spin 100s linear infinite;
+}
+
+/* Tablet Mode */
+@media (max-aspect-ratio: 1) {
+  .LOGO{
+    right: 0%;
+    height: 14vh;
+    width: 100vw;
+  }
+  .LOGO img{
+    right: 0%;
+    transform: translateX(0%);
+    z-index: 1;
+  }
+  .back2index{
+    top: 2%;
+  }
+  .back2index img{
+    height: 13vh;
+  }
+  .About-text{
+  padding-top: 15dvh;
+  padding-right: 6%;
+  padding-left: 6%;
+  }
+}
+
+/* Mobile Mode */
+@media (max-aspect-ratio: 0.58) {
+  .LOGO{
+    height: 24vw;
+  }
+  .back2index{
+    top: 1%;
+  }
+  .back2index img{
+    height: 22vw;
+  }
+}
+
+@keyframes spin{
+   from {
+    transform: rotate(0deg) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+  }
+  to {
+    transform: rotate(180deg) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+  }
+}
+
+/* scrolbar */
+.About-scroll-area::-webkit-scrollbar {
+  width: 0.5vh;
+}
+.About-scroll-area::-webkit-scrollbar-track {
+  background: rgb(16, 48, 26); 
+  border-radius: 5px;
+}
+.About-scroll-area::-webkit-scrollbar-thumb {
+  background-color: rgba(198, 235, 77, 0.6); 
+  border-radius: 4px;
+  border: 0.1vw solid rgba(252, 206, 25, 0.2);
+}
+.About-scroll-area::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(19, 177, 93, 0.27);
+}

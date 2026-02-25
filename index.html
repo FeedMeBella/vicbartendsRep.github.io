@@ -1,503 +1,73 @@
-
 <!DOCTYPE html>
 
 <html>
 
-  <head>
-    <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCREW70GLD"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XCREW70GLD');
-      </script>
-   <!-- Google tag (gtag.js) -->
-    <meta charset="UTF-8">
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://vicbartends.com"/>
-    <meta property="og:site_name" content="Vicbartends.com"/>
-    <meta property="og:title" content="Vicbartends.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vicbartends.com">
-    <link rel="canonical" href="https://vicbartends.com/">
-    <meta property="og:image" content="https://vicbartends.com/assets/icon.png"/>
-    <meta property="twitter:image" content="https://vicbartends.com/assets/icon.png"/>
-    <meta name="twitter:description" content="Welcome to Vicbartends.com! Have a drink and check out MaxIsDreaming's very silly website!">
-    <script type="application/ld+json">
+<style>
+  body {
+    width: 100dvw;
+    height: 100dvh;
+    background: #1D1D1D;
+  }
+  body img{
+    position: fixed;
+    max-width: 50dvw;
+    max-height: 80dvh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+</style>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCREW70GLD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XCREW70GLD');
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vicbartends.com" />
+  <meta property="og:site_name" content="Vicbartends.com" />
+  <meta property="og:title" content="Vicbartends.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vicbartends.com">
+  <link rel="canonical" href="https://vicbartends.com/">
+  <meta property="og:image" content="https://vicbartends.com/Devicon.png" />
+  <meta property="twitter:image" content="https://vicbartends.com/Devicon.png" />
+  <meta name="twitter:description" content="Getting ready for the new update!">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Vicbartends.com",
       "url": "https://vicbartends.com",
       "description": "Welcome to Vicbartends.com! Have a drink and check out MaxIsDreaming's very silly website!",
-      "image": "https://vicbartends.com/assets/icon.png",
+      "image": "https://vicbartends.com/Devicon.png",
       "author": {
         "@type": "Person",
         "name": "Max_is_Dreaming"
       }
     }
     </script>
-    <meta name="description" content="Welcome to Vicbartends.com! Have a drink and check out MaxIsDreaming's very silly website!">
-    <meta property="og:description" content="Welcome to Vicbartends.com! Have a drink and check out MaxIsDreaming's very silly website!">
-    <title>Vicbartends.com</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/site.webmanifest" />
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="maxisdreaming@vicbartends.com" rel="me">
-    <link href="https://github.com/FeedMeBella" rel="me">
-  </head>
-
-  <body class="index">
-    <div id="loading">
-      <pre></pre>
-    </div>
-    <div class="right">
-        <img class="bar_shadow" src="./assets/bar_shadow.png" alt="Bar Shadow Cus Gifs dont do low opacity">
-        <img class="bar" src="./assets/bar.gif" alt="Bar">
-        <img class="bartender" id="bartenderVic" src="./assets/VicGif.png" alt="Bartender">
-        <img class="bartender" id="bartenderLyria" src="./assets/LyriaGif.png" alt="Bartender">
-    </div>
-    <div class="left">
-        <img src="./assets/Roberta.png" alt="planet">
-    </div>
-
-    <div class="space" id="space-bar">
-        <img src="./assets/sbaridle.png" class="idle" alt="space bar idle">
-        <img src="./assets/sbarhover.png" class="focus" alt="space bar hover">
-    </div>
-
-    <div class="text-bubble" id="textBubble">
-      <div class=" bubble-wrapper">
-        <img src="./assets/TextBubbleDesk.gif" id="desktop-bubble" alt="TextBubble">
-        <img src="./assets/TextBubbleTablet.gif" id="mobile-bubble" alt="TextBubbleMobile">
-        <p id="bubbleText">Loading...</p>
-      </div>
-    </div>
-
-
-    <div class="ad-filter"></div>
-
-    <div class="ads">
-      <img src="./assets/Burgertown.gif" alt="Burgertown">
-      <img src="./assets/Arson.gif" alt="Arson">
-    </div>
-
-
-    <div class="phone-container" id="menu" >
-      <img src="./assets/Phone.png" id="phone" alt="menu">
-      <div class="button-container">
-        <div class="button-row">
-          <a href="PO1_AR-15" class="full-width"><img src="./assets/Polaris-button.png" alt="Polaris-button"></a>
-        </div>
-        <div class="button-row">
-          <a href="Extras" class="half"><img src="./assets/Extras.png" alt="Extras-button"></a>
-          <a id="tumblr-link" target="_blank" class="half"><img src="./assets/tumblr.png" alt="Tumblr-button"></a>
-        </div>
-        <div class="button-row">
-          <a href="Hotlinks" class="half"><img src="./assets/morewebsites.png" alt="Hotlinks-button"></a>
-          <a href="About" class="half"><img src="./assets/about.png" alt="About-button"></a>
-        </div>
-      </div>
-      <div id="snooze"></div>
-    </div>
-  </body>
-
-  <audio id="type-sound" src="sounds/typewriter.mp3" preload="auto"></audio>
-  <audio id="donaranha" src="sounds/vicpotenusa_atmos_thingy.mp3" preload="auto"></audio>
-
-
-<script>
-  function setVh() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-
-  window.addEventListener('resize', setVh);
-  window.addEventListener('load', setVh);
-</script>
-
-<script>
-  let adTimeout; 
-  const adsContainer = document.querySelector('.ads');
-  const adImages = adsContainer.querySelectorAll('img');
-  const overlay = document.querySelector('.ad-filter');
-
-  function showRandomAd() {
-    clearTimeout(adTimeout);
-
-    const delay = Math.random() * 60000 + 5000;
-
-    adTimeout = setTimeout(() => {
-      const randomIndex = Math.floor(Math.random() * adImages.length);
-      const chosenImage = adImages[randomIndex];
-
-      chosenImage.style.display = 'block';
-      overlay.style.display = 'block';
-
-      chosenImage.onclick = () => {
-        chosenImage.style.display = 'none';
-        overlay.style.display = 'none';
-
-        showRandomAd();
-      };
-    }, delay);
-  }
-
-  window.addEventListener('DOMContentLoaded', showRandomAd);
-
-  window.addEventListener('pagehide', () => {
-    clearTimeout(adTimeout);
-  });
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      clearTimeout(adTimeout);
-    } else {
-      showRandomAd();
-    }
-  });
-</script>
-
-<script>
-  const messagesVic = [
-    "Balls.",
-    "What can I get ya?",
-    "Pick your poison.",
-    "You look great today!",
-    "Bet ya can't name every single reference in this page.",
-    "Welcome to the bar. I'm Vic and I'll be your bartender for the entire 5 seconds you'll spend on this page.",
-    "I should give the gas giant behind me a name... I'm thinking Roberta.",
-    "Maxine wants you to know she's really proud of this website.",
-    "It's a bit lonely in here, don't you think?",
-    "Can you draw me a horse?",
-    "Oh yeah, the key is ORANGES!",
-    "Katy looked like fun.",
-    "The last customer looked so cool, I wanted to chat them up so bad...",
-    "Hella",
-    "I need to find more Hotlinks.",
-    "104 dias que fazem as férias e a escola acaba com elas...",
-    "Boo!",
-    "Laugh hard, run fast, be kind.",
-    "My favorite drink? A screwdriver... I just really like orange juice.",
-    "The artist drew me, then cut her hair like mine and Max is just a self insert. Hence the hairs.",
-    "What are you having?",
-    "Got any Hotlinks for me?"
-  ];
-
-  const messagesLyria = [
-      "Hiya! Did ya sleep well?",
-      "Orly is a dumb traitor.",
-      "Vic asked me to tell you that the key is ORANGES.",
-      "Hey! Can you get me off this rock?",
-      "Je ne connais pas le français, aidez-moi.",
-      "How the hell did I end up here?!",
-      "Vic said she needed to see a 'Crimson Star', whatever that means...",
-      "The drinks here are not half bad..."
-    ];
-  let messages = [];
-
-  const bartenderVic = document.getElementById("bartenderVic");
-  const bartenderLyria = document.getElementById("bartenderLyria");
-
-  const desktopBubble = document.getElementById("desktop-bubble");
-  const mobileBubble = document.getElementById("mobile-bubble");
-  const bubbleText = document.getElementById("bubbleText");
-  const bubbleParagraph = document.querySelector("#textBubble p");
-
-  const vicDesktopBubbleSrc = desktopBubble.src;
-  const vicMobileBubbleSrc = mobileBubble.src;
-  const lyriaDesktopBubbleSrc = "./assets/TextBubbleDeskLyria.png";
-  const lyriaMobileBubbleSrc = "./assets/TextBubbleTabletLyria.png";
-
-  function getRandomMessage(currentMessage) {
-    let newMessage;
-    do {
-      newMessage = messages[Math.floor(Math.random() * messages.length)];
-    } while (newMessage === currentMessage);
-    return newMessage;
-  }
-
-
-  function tryLyriaSwitch() {
-    const chance = Math.random();
-
-    if (chance < 0.04) { 
-      bartenderVic.style.display = "none";
-      bartenderLyria.style.display = "inline";
-
-      desktopBubble.src = lyriaDesktopBubbleSrc;
-      mobileBubble.src = lyriaMobileBubbleSrc;
-      messages = [...messagesLyria];
-
-      bubbleParagraph.style.fontSize = '20px';
-      bubbleParagraph.style.fontFamily = "'Bradley Hand', cursive";
-      bubbleText.textContent = getRandomMessage(bubbleText.textContent);
-
-
-    } else {
-      bartenderVic.style.display = "inline";
-      bartenderLyria.style.display = "none";
-
-      desktopBubble.src = vicDesktopBubbleSrc;
-      mobileBubble.src = vicMobileBubbleSrc;
-      messages = [...messagesVic];
-
-      bubbleText.textContent = getRandomMessage(bubbleText.textContent);
-    }
-  }
-
-  tryLyriaSwitch();
-</script>
-
-<script>
-const text1 = "This is a loading screen";
-const text2 = "...";
-const text3 = "Wow, your internet is really slow...";
-const target = document.querySelector("#loading pre");
-const typeSound = document.getElementById("type-sound");
-
-let i1 = 0, i2 = 0, i3 = 0;
-let loadingFinished = false;
-let stopTyping = false;
-let canPressSpace = true;
-let bubbleTimeout;
-let bubbleHasAppeared = false;
-
-function playTypeSound() {
-  if (loadingFinished) return;
-  typeSound.currentTime = 0;
-  typeSound.play();
-}
-
-function paragraph() {
-  target.textContent += "\n";
-}
-
-function typeText1() {
-  if (stopTyping) return;
-  if (i1 < text1.length) {
-    target.textContent += text1.charAt(i1);
-    playTypeSound();
-    i1++;
-    setTimeout(typeText1, 130);
-  } else {
-    setTimeout(paragraph, 1000);
-    setTimeout(typeText2, 2000);
-  }
-}
-
-function typeText2() {
-  if (stopTyping) return;
-  if (i2 < text2.length) {
-    target.textContent += text2.charAt(i2);
-    playTypeSound();
-    i2++;
-    setTimeout(typeText2, 400);
-  } else {
-    setTimeout(paragraph, 3000);
-    setTimeout(typeText3, 4000);
-  }
-}
-
-function typeText3() {
-  if (stopTyping) return;
-  if (i3 < text3.length) {
-    target.textContent += text3.charAt(i3);
-    playTypeSound();
-    i3++;
-    setTimeout(typeText3, 100);
-  }
-}
-
-function onLoadingComplete() {
-  stopTyping = true;
-  loadingFinished = true;
-
-  const completeLine = document.createElement('span');
-  completeLine.textContent = "\nloading complete, press any key to enter";
-  completeLine.style.color = 'lightgreen';
-  completeLine.style.cursor = 'default';
-  completeLine.style.userSelect = 'none';
-
-  target.appendChild(completeLine);
-
-  const loader = document.getElementById("loading");
-  const BGmusic = document.getElementById("donaranha");
-
-
- function proceed() {
-    loader.classList.add("hide");
-
-    window.skipNextBlur = false;
-
-    BGmusic.play().catch(err => {
-      console.warn("Autoplay prevented:", err);
-    });
-
-    bubbleTimeout = setTimeout(() => {
-        bubbleText.textContent = getRandomMessage("");                   
-        textBubble.classList.add('animate__animated', 'animate__jackInTheBox');
-        textBubble.style.setProperty('--animate-duration', '2s');
-        bubbleHasAppeared = true;
-    }, 3000);
-
-    window.addEventListener('blur', () => {
-      if (!window.skipNextBlur) {
-        BGmusic.pause();
-      }
-      window.skipNextBlur = false; 
-    });
-
-    window.addEventListener('focus', () => {
-      if (loadingFinished && BGmusic.paused) {
-        BGmusic.play().catch(err => {
-          console.warn("Autoplay resume prevented:", err);
-        });
-      }
-    });
-
-    loader.addEventListener('transitionend', (e) => {
-      if (e.propertyName === "opacity") {
-        loader.remove();
-        startMenuLogic();
-      }
-    }, { once: true });
-
-    // Cleanup listeners
-    document.removeEventListener('keydown', keyListener);
-    loader.removeEventListener('click', clickListener);
-  }
-
-  function keyListener() {
-    proceed();
-  }
-
-  function clickListener() {
-    proceed();
-  }
-
-  document.addEventListener('keydown', keyListener);
-  loader.addEventListener('click', clickListener);
-}
-
-typeText1();
-
-window.addEventListener("load", () => {
-  onLoadingComplete();
-});
-
-function startMenuLogic() {
-  const button = document.getElementById('space-bar'); 
-  const snooze = document.getElementById('snooze'); 
-  const menu = document.getElementById('menu');
-  const textBubble = document.getElementById('textBubble');
-  const bubbleText = document.getElementById('bubbleText');
-  const bartenders = document.querySelectorAll('.bartender');
-
-  function hideTextBubble() {
-  if (!bubbleHasAppeared) return;
-  textBubble.classList.remove('animate__jackInTheBox', 'animate__animated');
-  textBubble.classList.add('animate__animated', 'animate__fadeOut');
-  textBubble.style.setProperty('--animate-duration', '1s');
-}
-
-
- function showTextBubble() {
-  setTimeout(() => {
-    textBubble.classList.remove('animate__animated', 'animate__fadeOut');
-    bubbleText.textContent = getRandomMessage(bubbleText.textContent);
-    textBubble.classList.add('animate__animated', 'animate__jackInTheBox');
-    textBubble.style.setProperty('--animate-duration', '2s');
-    bubbleHasAppeared = true;
-  }, 300);
-    }
-
-  function activateMenu() {
-  if (bubbleTimeout) clearTimeout(bubbleTimeout); 
-  menu.classList.remove('move-down');
-  menu.classList.add('move-up');
-  button.classList.add('hide');
-  hideTextBubble();
- }
-
-  function deactivateMenu() {
-    menu.classList.remove('move-up');
-    menu.classList.add('move-down');
-    showTextBubble();
-    setTimeout(() => {
-      button.classList.remove('hide');
-    }, 700);
-  }
-
-  bartenders.forEach(bartender => bartender.addEventListener('click', hideTextBubble));
-  setTimeout(() => {
-    if (!menu.classList.contains('move-up') && !menu.classList.contains('move-down')) {
-      activateMenu();
-    }
-  }, 10000);
-
-  button.addEventListener('click', activateMenu);
-  snooze.addEventListener('click', deactivateMenu);
-
-
-  document.addEventListener('keydown', (event) => {
-  if (event.code === 'Space') {
-    event.preventDefault();
-
-    if (!canPressSpace) return;
-
-    canPressSpace = false; 
-    setTimeout(() => {
-      canPressSpace = true; 
-    }, 1000); 
-
-    if (menu.classList.contains('move-up')) {
-      deactivateMenu();
-    } else {
-      activateMenu();
-    }
-  }
- });
- 
-}
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const tumblrLink = document.getElementById('tumblr-link');
-    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const Lyria = document.getElementById('bartenderLyria');
-
-    Lyria.addEventListener('click', function(event) {
-      event.preventDefault();
-      window.skipNextBlur = true;
-      const ok = window.confirm("This button takes you to Lyria's linktree! Wanna continue?");
-      if (ok) {
-        window.skipNextBlur = false;
-        window.open('https://linktr.ee/__little_draw', '_blank');
-      }
-    });
-
-    const tumblrURL = isMobile? "https://www.tumblr.com/maxisdreaming/tagged/my%20art": "https://maxisdreaming.tumblr.com/tagged/my%20art";
-
-    tumblrLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.skipNextBlur = true;
-      const confirmLeave = window.confirm("For now this redirects to my Tumblr page! \nPS.: This doesn't work well on mobile cuz tumblr is DUMB AND STUPID!");
-      if (confirmLeave) {
-        window.skipNextBlur = false;
-        window.open(tumblrURL, '_blank');
-      }
-    });
-  });
-</script>
-
+  <meta name="description" content="Getting ready for the new update!">
+  <meta property="og:description" content="Getting ready for the new update!">
+  <title>Vicbartends.com</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="Devicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Devicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Devicon.png" />
+  <link href="maxisdreaming@vicbartends.com" rel="me">
+  <link href="https://github.com/FeedMeBella" rel="me">
+</head>
+
+<body>
+  <img src="Maint.png" alt="Maintenance!!!">
+</body>
 
 </html>
