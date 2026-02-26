@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'VA-11 Hall-A 6px Non-mono';
-    src: url("/font/va-11-hall-a-6px-non-mono.ttf") format('truetype'),
-        url("/font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
-        url("/font/VA-11Hall-A6pxNon-mono.woff") format('woff');
+    src: url("/TESTING/font/va-11-hall-a-6px-non-mono.ttf") format('truetype'),
+        url("/TESTING/font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
+        url("/TESTING/font/VA-11Hall-A6pxNon-mono.woff") format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
   font-family: 'Bradley Hand';
-  src: url('/font/BradleyHandITCTT-Bold.ttf') format('truetype');
+  src: url('/TESTING/font/BradleyHandITCTT-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -823,3 +823,4 @@ a, p, h1, figcaption, em, li{
 #sat28 { --angle-start: 324deg; }
 #sat29 { --angle-start: 336deg; }
 #sat30 { --angle-start: 348deg; }
+
