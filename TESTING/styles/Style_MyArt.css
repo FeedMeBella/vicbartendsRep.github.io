@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'amiga-topaz';
-    src: url("/font/amiga-topaz.woff2") format("woff2"),
-         url("/font/amiga-topaz.woff") format("woff"),
-         url("/font/amiga-topaz.otf") format("opentype"),
-         url("/font/amiga-topaz.ttf") format("truetype");
+    src: url("/TESTING/font/amiga-topaz.woff2") format("woff2"),
+         url("/TESTING/font/amiga-topaz.woff") format("woff"),
+         url("/TESTING/font/amiga-topaz.otf") format("opentype"),
+         url("/TESTING/font/amiga-topaz.ttf") format("truetype");
 }
 @font-face {
     font-family: 'typewriter';
-    src: url("/font/rm_typerighter_old.woff2") format("woff2"),
-         url("/font/rm_typerighter_old.woff") format("woff"),
-        url("/font/rm_typerighter_old.otf") format("opentype"),
-         url("/font/rm_typerighter_old.ttf") format("truetype");
+    src: url("/TESTING/font/rm_typerighter_old.woff2") format("woff2"),
+         url("/TESTING/font/rm_typerighter_old.woff") format("woff"),
+         url("/TESTING/font/rm_typerighter_old.otf") format("opentype"),
+         url("/TESTING/font/rm_typerighter_old.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -1319,4 +1319,5 @@ a, p, h1, figcaption, em, li{
 }
 #Tcontent::-webkit-scrollbar-thumb {
   background-color: rgb(153, 152, 160);
+
 }
