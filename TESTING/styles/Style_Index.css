@@ -440,7 +440,7 @@ a, p, h1, figcaption, em, li{
 /* Blueberrry 925 */
 .phone-container {
   position: fixed;
-  height: calc(var(--vh, 1vh) * 98);
+  height: 98dvh;
   z-index: 3;
   bottom: 0%;
   transform: translateY(200%);
@@ -648,7 +648,7 @@ a, p, h1, figcaption, em, li{
   height: auto;
   left: auto;
   display: flex;
-  transform: translateX(0%);
+  transform: translateX(0%) translateY(200%);;
   --x: 0;
   transition: none;
   }
