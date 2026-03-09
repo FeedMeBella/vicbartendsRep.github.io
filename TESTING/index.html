@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="maxisdreaming@vicbartends.com" rel="me">
     <link href="https://github.com/FeedMeBella" rel="me">
-    </head>
+  </head>
 
   <body>
     <div id="loading">
@@ -88,7 +88,7 @@
         <a class="pointer" href="https://tthumbelina.neocities.org/" target="_blank"> <img id="sat21" src="https://tthumbelina.neocities.org/buttons/IMG_1160.GIF" alt="thumbelina"></a> <!-- Cool site, cool person!-->
         <a class="pointer" href="https://duck.fyi" target="_blank"><img id="sat23" src="https://duck.fyi/buttons/88x31.gif" alt="Duck"></a> <!-- This place is awesome, I'm emailing duck about reaching 700 in /game. I'm hoping it's a highscore!-->
         <a class="pointer" href="https://psfla.net/" target="_blank"><img id="sat25" src="https://psfla.net/resc/img/psflabutton.png" alt="PSFLA"></a> <!-- reminder to self to ask to be neighbors with PSFLA -->
-        <a class="pointer" href="https://joo.sh" target="_blank"><img id="sat27" src="https://files.joo.sh/img/buttons/jooshRice.gif" alt="Joooooooooooooooooooooooosh"></a> <!-- Satisfying place. And he loves his girflriend so much, it was really lovely to read some of the entries -->
+        <a class="pointer" href="https://joo.sh" target="_blank"><img id="sat27" src="buttons/jooshRice.gif" alt="Joooooooooooooooooooooooosh"></a> <!-- Satisfying place. And he loves his girflriend so much, it was really lovely to read some of the entries -->
         <a class="pointer" href="https://troy-sucks.neocities.org/" target="_blank"><img id="sat29" src="https://troy-sucks.neocities.org/images/troysucksstripes.gif" alt="TroySucks"> <!--Man this dude's journals are AMAZING. Super fun stuff, totes worth snooping around.-->
 
         <a class="pointer" href="" target="_blank"><img id="sat1" src="buttons/moon.png" alt="This is just a moon"></a>
@@ -100,7 +100,7 @@
         <img class="bar_shadow" src="./assets/bar_shadow.png" alt="Bar Shadow Cus Gifs dont do low opacity" draggable="false">
         <img class="bar" src="./assets/bar.png" alt="Bar" draggable="false">
         <img class="desktop_sign" src="./assets/WELCOME.gif" alt="Bar" draggable="false">
-        <img class="tablet_sign" src="./assets/WELCOME.gif" alt="Bar" draggable="false"> <!-- THIS IS NOT DUMB i MADE THIS TO FIX A BUG! don't delete it future max -->
+        <img class="tablet_sign" src="./assets/WELCOME.gif" alt="Bar" draggable="false"> <!-- THIS IS NOT DUMB i MADE THIS TO FIX A BUG! don't delete it future max. thanks past max, I was gonna delete it just now -->
         <!-- <img class="seats" src="./assets/Seats.gif" alt="Bar" draggable="false"> -->
 
         <img class="Mixtape ATMN pointer" src="./assets/Autumn.png" alt="cassete" draggable="false">
@@ -180,8 +180,6 @@
       <img src="./assets/Phone.png" id="phone" alt="menu">
       <div class="chatroom closed"><iframe src="https://www5.cbox.ws/box/?boxid=961522&boxtag=uxUIRY" width="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe></div>
       <img class="vicbartendschat closed" src="assets/VicbartendsChat.png" alt="VicbartendsChat header">
-      <div class="vicbartendsborderright closed"></div>
-      <div class="vicbartendsborderleft closed"></div>
       <div class="button-container">
         <div class="button-row">
           <a href="PO1_AR-15" class="full-width pointer"><img src="./assets/Polaris-button.png" alt="Polaris-button"></a>
@@ -454,8 +452,6 @@ function startMenuLogic() {
       phoneicons.classList.remove('closed');
       chatroom.classList.add('closed');
       vicbartendschat.classList.add('closed');
-      vicbartendsborderleft.classList.add('closed');
-      vicbartendsborderright.classList.add('closed');
       chatclosed = true
     }
   });
@@ -561,8 +557,8 @@ function startMenuLogic() {
     if (selectedbartender == "Lyria") { 
       bartenderVic.style.display = "none";
       bartenderLyria.style.display = "inline";
-      pointer.forEach(pointer => {pointer.style.setProperty("cursor", "url('../assets/CursorLyria2.png'), default", "important");});
-      document.body.style.setProperty("cursor", "url('../assets/CursorLyria1.png'), default", "important");
+      pointer.forEach(pointer => {pointer.style.setProperty("cursor", "url('./assets/CursorLyria2.png'), default", "important");});
+      document.body.style.setProperty("cursor", "url('./assets/CursorLyria1.png'), default", "important");
 
       desktopBubble.src = lyriaDesktopBubbleSrc;
       mobileBubble.src = lyriaMobileBubbleSrc;
@@ -576,8 +572,8 @@ function startMenuLogic() {
     } else {
       bartenderVic.style.display = "inline";
       bartenderLyria.style.display = "none";
-      pointer.forEach(pointer => {pointer.style.setProperty("cursor", "url('../assets/CursorVic2.png'), default", "important");});
-      document.body.style.setProperty("cursor", "url('../assets/CursorVic1.png'), default", "important");
+      pointer.forEach(pointer => {pointer.style.setProperty("cursor", "url('./assets/CursorVic2.png'), default", "important");});
+      document.body.style.setProperty("cursor", "url('./assets/CursorVic1.png'), default", "important");
 
       desktopBubble.src = vicDesktopBubbleSrc;
       mobileBubble.src = vicMobileBubbleSrc;
@@ -773,8 +769,11 @@ function startMenuLogic() {
   const phoneicons = document.querySelector(".button-container");
   const chatroom = document.querySelector(".chatroom");
   const vicbartendschat = document.querySelector(".vicbartendschat");
-  const vicbartendsborderleft = document.querySelector(".vicbartendsborderleft");
-  const vicbartendsborderright = document.querySelector(".vicbartendsborderright");
+  const vicbartendsborderleft = document.querySelector(".vicbartendsborderlefttop");
+  const vicbartendsborderright = document.querySelector(".vicbartendsborderrighttop");
+  const vicbartendsborderleftbottom = document.querySelector(".vicbartendsborderleftbot");
+  const vicbartendsborderrightbottom = document.querySelector(".vicbartendsborderrightbot"); 
+  const vicbartendsdeets = document.querySelector(".vicbartendsdeets");
 
   let chatclosed = true
 
@@ -782,8 +781,6 @@ function startMenuLogic() {
     phoneicons.classList.add('closed');
     chatroom.classList.remove('closed');
     vicbartendschat.classList.remove('closed');
-    vicbartendsborderleft.classList.remove('closed');
-    vicbartendsborderright.classList.remove('closed');
     chatclosed = false
   });
 </script>

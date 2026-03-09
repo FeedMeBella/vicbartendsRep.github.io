@@ -1,0 +1,16 @@
+/usr/bin/ffmpeg -hide_banner -y -y -r 5 -start_number 0 -start_number_range 1 -i /home/Max/Pictures/Art stuff/P01-ARIS/Website 2.0/frame%04d.png -f apng -pred none -plays 0 /home/Max/Desktop/VICBARTENDS LIVE/vicbartendsRep.github.io/TESTING/assets/LyriaGif.png
+=====================================================
+Input #0, image2, from '/home/Max/Pictures/Art stuff/P01-ARIS/Website 2.0/frame%04d.png':
+  Duration: 00:00:01.24, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 760x905 [SAR 11811:11811 DAR 152:181], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> apng (native))
+Press [q] to stop, [?] for help
+Output #0, apng, to '/home/Max/Desktop/VICBARTENDS LIVE/vicbartendsRep.github.io/TESTING/assets/LyriaGif.png':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: apng, rgba(pc, gbr/unknown/unknown, progressive), 760x905 [SAR 11811:11811 DAR 152:181], q=2-31, 200 kb/s, 5 fps, 5 tbn
+      Metadata:
+        encoder         : Lavc61.19.101 apng
+frame=    6 fps=0.0 q=-0.0 size=     512KiB time=00:00:01.20 bitrate=3495.3kbits/s speed= 2.4x    [out#0/apng @ 0x55f111022880] video:1154KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.007280%
+frame=   31 fps=0.0 q=-0.0 Lsize=    1154KiB time=00:00:06.20 bitrate=1524.3kbits/s speed=6.53x    
