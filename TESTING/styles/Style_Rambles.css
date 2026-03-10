@@ -56,11 +56,14 @@ span{
 #go-back{
   padding-left: 1dvh;
 }
+#go-back:hover{
+  color: rgb(255, 63, 4);
+}
 #back2top{
   text-align: right;
   padding: 0dvh 1dvh 2dvh
 }
-#go-back span:hover, #back2top span:hover, a:hover{
+#back2top span:hover, a:hover{
   color: rgb(248, 41, 255);
 }
 .endspacer{
@@ -79,6 +82,7 @@ span{
 }
 .nav a{
   display: inline-block;
+  transform: translateX(2.2%);
 }
 .divider{
   text-align: center;
@@ -95,6 +99,7 @@ span{
   margin: 4dvh;
   font-size: 1.2rem;
   text-indent: 2rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 html::-webkit-scrollbar {
@@ -127,13 +132,16 @@ html::-webkit-scrollbar-thumb:hover {
     font-size: 1rem;
   }
   .divider{
-    font-size: 3dvw;
+    font-size: 2.9dvw;
   }
   h1 {
     font-size: 5dvw;
   }
+  .nav{
+    width: 90dvw;
+  }
   .nav a{
-    font-size: 2dvw;
+    font-size: 3dvw;
   }
 
   html::-webkit-scrollbar {
