@@ -1914,41 +1914,50 @@
 
   document.querySelectorAll('.Frame').forEach(frame => {
     frame.addEventListener('mousedown', mouseDown);
+    frame.addEventListener('touchstart', mouseDown);
   });
 
   function mouseDown(e){
     activeFrame = e.currentTarget;
     const rect = activeFrame.getBoundingClientRect();
 
-    const y = e.clientY - rect.top;
-    const x = e.clientX - rect.left;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+    const y = clientY - rect.top;
+    const x = clientX - rect.left;
 
     const framebar = window.innerHeight * 0.05;
     const closebutton = window.innerHeight * 0.20;
     if (y > framebar) {return;}
     if (x > rect.width - closebutton) return;
 
-    startX = e.clientX
-    startY = e.clientY
+    startX = clientX;
+    startY = clientY;
 
-    document.addEventListener('mousemove', mouseMove)
-    document.addEventListener('mouseup', mouseUp)
+    document.addEventListener('mousemove', mouseMove);
+    document.addEventListener('mouseup', mouseUp);
+    document.addEventListener('touchmove', mouseMove);
+    document.addEventListener('touchend', mouseUp);
   }
 
   function mouseMove(e){
-    newX = startX - e.clientX
-    newY = startY - e.clientY
-    
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
 
-    startX = e.clientX
-    startY = e.clientY
-    
-    activeFrame.style.top = (activeFrame.offsetTop - newY) + 'px'
-    activeFrame.style.left = (activeFrame.offsetLeft - newX) + 'px'
+    newX = startX - clientX;
+    newY = startY - clientY;
+
+    startX = clientX;
+    startY = clientY;
+
+    activeFrame.style.top = (activeFrame.offsetTop - newY) + 'px';
+    activeFrame.style.left = (activeFrame.offsetLeft - newX) + 'px';
   }
 
   function mouseUp(e){
-    document.removeEventListener('mousemove', mouseMove)
+    document.removeEventListener('mousemove', mouseMove);
+    document.removeEventListener('touchmove', mouseMove);
     let istoohigh = activeFrame.offsetTop - newY;
     if (istoohigh < 0) { activeFrame.style.top = "0"};
   }
@@ -1974,8 +1983,11 @@
     frame.addEventListener('mousedown', () => {
       refocus(frame);
     });
+    frame.addEventListener('touchstart', () => {
+      refocus(frame);
+    });
     observer.observe(frame);
-  }); //I'm gonna be honest, I was tired and used an AI for this resize limit logic cuz I wasn't figuring out a way to do this on my own :( There is probably a better way to do this, but this works I GUESS.   
+  });
 
   function refocus(frameid){
     focusindex++;
@@ -1983,7 +1995,6 @@
     frameid.style.zIndex = focusindex;
     frameid.classList.add("FocusedWindow");
   }
-
 
   mkclose.onclick = () => {
     Hello.pause();

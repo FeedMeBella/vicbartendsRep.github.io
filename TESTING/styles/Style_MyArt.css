@@ -593,6 +593,7 @@ a, p, h1, figcaption, em, li{
   overflow: auto;
   border-radius: 0.5%;
   box-shadow: 0px 0px 10px #2a2a2a;
+  touch-action: none;
 }
 .FrameTitle{
   font-size: 0.8dvh;
