@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Coral Pixels';
-    src: url("/font/CoralPixels-Regular.ttf") format('truetype');
+    src: url("../font/CoralPixels-Regular.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@ body, html {
 }
 body {
   height: 100dvh;
-  background-image: url(/assets/RamblesBG.png);
+  background-image: url(../assets/RamblesBG.png);
   background-size: 10%;
   user-select: none;
   -webkit-user-select: none;
