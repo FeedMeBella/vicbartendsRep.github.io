@@ -45,7 +45,8 @@ a, p, h1, figcaption, em, li{
   height: 100vh;
   background: rgba(0, 0, 0);
   z-index: 9999;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: all;
 }
 #loading pre{
   position: absolute;
@@ -60,17 +61,17 @@ a, p, h1, figcaption, em, li{
 /* Bartender Select */
 .Bartenderselect{
   position: fixed;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   height: 100dvh;
-  width: 50dvw;
+  width: 60dvw;
   height: 100dvh;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: all 0.5s ease-in-out
+  transition: opacity 0.5s ease-in-out
 }
 .BSTitle {
   color: rgb(255, 204, 191);
@@ -535,6 +536,12 @@ a, p, h1, figcaption, em, li{
 
 /* Tablet Mode */
 @media (max-aspect-ratio: 1) {
+  .Bartenderselect{
+    width: 90dvw;
+  }
+  .BSTitle {
+    font-size: 7dvw;
+  }
   #loading pre{
   left: 1%;
   bottom: 50%;

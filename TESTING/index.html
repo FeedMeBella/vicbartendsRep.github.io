@@ -343,6 +343,7 @@ function onLoadingComplete() {
 
     loadingtext.style.opacity = "0";
     BSsound1.play().catch(err => {console.warn("Autoplay prevented:", err);});
+    BartenderSelect.style.display = "flex";
     setTimeout(() => {BartenderSelect.style.opacity = "1";}, 200);
 
     setTimeout(() => {
