@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'VA-11 Hall-A 6px Non-mono';
-    src: url("/font/VA-11Hall-A6pxNon-mono.ttf") format('embedded-opentype'),
-        url("/font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
-        url("/font/VA-11Hall-A6pxNon-mono.woff") format('woff');
+    src: url("../font/VA-11Hall-A6pxNon-mono.ttf") format('embedded-opentype'),
+        url("../font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
+        url("../font/VA-11Hall-A6pxNon-mono.woff") format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
