@@ -77,6 +77,9 @@ span{
   text-align: center;
   margin: 0;
 }
+.nav a{
+  display: inline-block;
+}
 .divider{
   text-align: center;
   margin: 1rem;
@@ -94,8 +97,6 @@ span{
   text-indent: 2rem;
 }
 
-
-
 html::-webkit-scrollbar {
   width: 1dvh;
 }
@@ -108,3 +109,35 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background-color: rgb(254, 212, 255);
 }
+
+@media (max-aspect-ratio: 1) {
+  .backgroundborder{
+    width: 96dvw;
+  }
+  .background{
+    width: 94dvw;
+    margin-top: 1dvh;
+  }
+  .rambleheader{
+    margin: 4dvh 5dvh;
+  }
+  .ramble p{
+    margin-left: 1.5dvh;
+    margin-right: 1.5dvh;
+    font-size: 1rem;
+  }
+  .divider{
+    font-size: 3dvw;
+  }
+  h1 {
+    font-size: 5dvw;
+  }
+  .nav a{
+    font-size: 2dvw;
+  }
+
+  html::-webkit-scrollbar {
+    width: 1dvw;
+  }
+}
+
