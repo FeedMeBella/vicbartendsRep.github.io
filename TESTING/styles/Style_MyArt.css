@@ -160,10 +160,10 @@ a, p, h1, figcaption, em, li{
 .BIOS_Graphic_Load{
   position: absolute;
   z-index: -1;
-  width: 40vw;
+  width: 100dvw;
   height: 80dvh;
-  top: 25dvw;
-  left: 43vw;
+  top: 25dvh;
+  left: 0;
   background-color: rgba(0, 87, 175, 1);
 }
 .tab{
@@ -273,7 +273,6 @@ a, p, h1, figcaption, em, li{
   position: fixed;
   height: 80dvh;
   width: auto; 
-  min-width: 40dvh;
   left: 0;
   bottom: 5.5dvh; 
   opacity: 0;
@@ -1210,31 +1209,205 @@ a, p, h1, figcaption, em, li{
 
 /* Tablet Mode */
 @media (max-aspect-ratio: 1) {
-#MK_Frame{
-  left: 6%;
-}
-#MA_Frame{
-  min-width: auto;
-  min-height: 30dvh;
-  
-  width: 60%;
-  height: 80%;
-  top: 2%;
-  left: 12%;
-}
+  #MK_Frame{
+    min-width: auto;
+    min-height: 30dvh;
+  width: 88%;
+  height: 90%;
+  }
+  #MK_Switch{
+    width: 17%;
+  }
+  #MK_Knob{
+    top: 0%;
+    left: 18%;
+    width: 18%;
+  }
+  #MK_KnobBase{
+    top: 0%;
+    left: 18%;
+    width: 18%;
+  }
+  #MK_Stylus{
+    top: 0%;
+    left: 43%;
+    width: 8%;
+  }
+  #MK_Slider{
+    left: 43%;
+    width: 30%;
+  }
+  #MK_images{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 30%;
+    z-index: 0;
+    margin: 1% 0.1%;
+    -webkit-filter: drop-shadow(0px 0px 10px #151515);
+    filter: drop-shadow(0px 0px 10px #151515);
+  }
+  #MK_disk{
+    width: 120%;
+  }
+
+  #MA_Frame{
+    min-width: auto;
+    min-height: 30dvh;
+    
+    width: 90%;
+    height: 90%;
+    top: 2%;
+    left: 4%;
+  }
+  #T_Frame{
+    min-width: 10dvh;
+    min-height: 30dvh;
+    
+    width: 90%;
+    height: 60%;
+    top: 20%;
+    left: 5%;
+  }
+  .BIOS_Logo{
+    width: 5.5vw;
+    padding-top: 4%;
+    left: 3dvw;
+  }
+  .BIOS_Graphic{
+    width: 80dvw;
+    left: 18dvw;
+  }
+  .BIOS p{
+    font-size: 1.5vw;
+    padding-left: 3%;
+  }
+  .BIOS pre{
+    font-size: 1.8vw;
+    padding-top: 2%;
+    padding-left: 0%;
+    transform: translateX(-5%);
+  }
+  #P3a{
+    font-size: 3vw;
+  }
+
+  .taskbar{
+    height: 5dvh;
+  }
+  .homebutton{
+    width: 22dvh;
+  }
+  .homemenu{
+    height: auto;
+    width: 60dvw; 
+  }
+  #homemenubg{
+    height: auto;
+    width: 100%;
+  }
+  #shutdown{
+    width: 54.5%;
+    height: auto;
+  }
+  #reboot{
+    width: 54.5%;
+    height: auto;
+    bottom: 9dvw;
+  }
+  #sleep{
+    width: 54.7%;
+    height: auto;
+    bottom: 18.25dvw;
+  }
+  #png1{
+    width: 13%;
+    height: auto;
+    bottom: 32dvw;
+    left: 37%;
+  }
+  .tbicons{
+    left: 22dvh;
+  }
+  .time{
+    width: 10.5dvh;
+  }
+  .time p{
+    display: none;
+  }
+  #fullscreen img{
+    width: 40%;
+  }
+  #fullscreen img:hover{
+    background: rgba(0, 0, 0, 0.225);
+  }
+  .trayiconslist{
+    right: 5.3dvh;
+  }
+  .trayicon{
+    border: none;
+    z-index: 1;
+  }
+  #nightmode{
+    display: none;
+    border: none;
+  }
+  #volumebutton{
+    display: none;
+  }
+  .sitenews{
+    width: 50dvw;
+    height: auto;
+  }
+  .sitenewscontent:after {
+    left: auto;
+    right: 1.3dvh;
+  }
 }
 
 /* Mobile Mode */
 @media (max-aspect-ratio: 0.58) {
-.folderscollumn{
-  width: 15dvh; 
-}
-.topborder{
-  left: 15dvh;
-}
-.FEcontent{  
-  left: 15dvh;
-}
+  .folderscollumn{
+    width: 15dvh; 
+  }
+  .topborder{
+    left: 15dvh;
+  }
+  .FEcontent{  
+    left: 15dvh;
+  }
+  .FE_hidefoldercollumn{
+    height: 5dvh;
+    width: 4dvh;
+    top: 50%;
+    left: 15dvh;
+  }
+
+  .MK_Content article{
+    top: 12dvh;
+    width: 67%;
+    margin: 0;
+  }
+  .MK_Content article p{
+    font-size: 8vw;
+    line-height: 80%;
+  }
+
+  .homemenu{
+    width: 90dvw; 
+  }
+  #reboot{
+    bottom: 13.4dvw;
+  }
+  #sleep{
+    bottom: 27.1dvw;
+  }
+  #png1{
+    bottom: 47dvw;
+  }
+  .sitenews{
+    width: 70dvw;
+  }
 }
 
 

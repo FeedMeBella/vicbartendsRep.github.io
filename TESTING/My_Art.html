@@ -66,7 +66,7 @@
   <audio id="Windows" src="./sounds/windows.mp3" preload="auto"></audio>
   <audio id="woowee" src="./sounds/woowee.mp3" preload="auto"></audio>
 
-  <!-- Intro --> 
+  <!-- Intro
   <div class="Switch">
     <p style="background-color:#0e0e0e; padding: 0.3%; font-size: 1.5dvh;">Click to turn on computer</p>
     <p style="background-color:#0e0e0e; padding: 0.3%; transform: translate(-50%, 120%); font-size: 0.7dvh;">(F11 to forcefully toggle fullscreen mode)</p>
@@ -117,7 +117,7 @@
     <p class="P13"></p>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div> 
-
+ --> 
 
 
   <div class="background">
@@ -718,7 +718,7 @@
 </body>
 
 
-<!-- Intro Animation-->
+<!-- Intro Animation
 <script>
   const SgA = document.querySelector(".BlackHole");
   const SgACurtain = document.querySelector(".BlackHoleCurtain");
@@ -1190,7 +1190,7 @@
   }
 
 </script> 
-
+-->
 
 <!-- Desktop Logic -->
 <script>
@@ -1508,6 +1508,7 @@
   ColIntroComic.forEach(button =>button.addEventListener('click', () => openfolder("Intro_Comic")));
 
   let fc_hidden = false;
+  
   FE_hidefc.forEach(button => {
     button.addEventListener('click', () => {
       if (!fc_hidden) {
@@ -1523,9 +1524,8 @@
         FE_top.forEach(border => {
           border.style.left = "0";
         });
-        FE_hidefc.forEach(buttonagain => {
-          buttonagain.style.transform = "translate(calc(-23dvh + -20%), -50%) rotate(180deg)";
-        });
+        if (isPortraitPhone()) {FE_hidefc.forEach(buttonagain => {buttonagain.style.transform = "translate(calc(-15dvh + -20%), -50%) rotate(180deg)";});}
+        else {FE_hidefc.forEach(buttonagain => {buttonagain.style.transform = "translate(calc(-23dvh + -20%), -50%) rotate(180deg)";});}
           
         fc_hidden = true;
       }
@@ -1549,6 +1549,25 @@
       }
     });
   });
+  if (isPortraitPhone()) {
+    FE_fc.forEach(foldercollumn => {
+          foldercollumn.style.width = "0";
+        });
+    FE_content.forEach(content => {
+      content.style.left = "0";
+    });
+    FE_content.forEach(content => {
+      content.style.left = "0";
+    });
+    FE_top.forEach(border => {
+      border.style.left = "0";
+    });
+    FE_hidefc.forEach(buttonagain => {
+      buttonagain.style.transform = "translate(calc(-15dvh + -20%), -50%) rotate(180deg)";
+    });
+      
+    fc_hidden = true;
+  }
 
 
 
@@ -1750,7 +1769,7 @@
       if (mkopen) {refocus(MK_Frame); return}
       mkopen = true;
       MK_Frame.style.left = (phonefactor * Math.random() * 20) + "%";
-      setTimeout(() => {
+      setTimeout(() => {x
           mankind.classList.remove("closed");
           refocus(MK_Frame);
           addTaskbarIcon("mk_tbicon", "My_Art/VicBartends.OS/Icon_Mankind_3.png", "mk icon");
@@ -2173,49 +2192,49 @@
     setTimeout(() => {icon_mankind.classList.add('closed');}, 1340);
     setTimeout(() => {window.location.reload();}, 1700);
   });
-let issleeping = false;
-let dozingofftime;
-let clickwake;
-let movewake;
-let presswake;
-const sleepScreen = document.querySelector(".sleepscreen");
-document.getElementById('sleep').addEventListener('click', () => {
-  if (!issleeping) {
+  let issleeping = false;
+  let dozingofftime;
+  let clickwake;
+  let movewake;
+  let presswake;
+  const sleepScreen = document.querySelector(".sleepscreen");
+  document.getElementById('sleep').addEventListener('click', () => {
+    if (!issleeping) {
+      document.removeEventListener('click', clickwake);
+      document.removeEventListener('mousemove', movewake);
+      document.removeEventListener('keydown', presswake);
+
+      clearTimeout(dozingofftime);
+
+      dozingofftime = setTimeout(() => {
+        Hello.pause(); 
+        planetearth.pause();
+        sleepScreen.classList.remove('closed');
+        issleeping = true;
+        lookforwakeup();
+      }, 350);
+    }
+  });
+
+  function lookforwakeup() {
+    clickwake = function () {wakeUp();};
+    movewake = function () {wakeUp();};
+    presswake = function () {wakeUp();};
+
+    document.addEventListener('click', clickwake);
+    document.addEventListener('mousemove', movewake);
+    document.addEventListener('keydown', presswake);
+  }
+  function wakeUp() {
+    setTimeout(() => {
+      sleepScreen.classList.add('closed');
+      issleeping = false;
+    }, 420);
+
     document.removeEventListener('click', clickwake);
     document.removeEventListener('mousemove', movewake);
     document.removeEventListener('keydown', presswake);
-
-    clearTimeout(dozingofftime);
-
-    dozingofftime = setTimeout(() => {
-      Hello.pause(); 
-      planetearth.pause();
-      sleepScreen.classList.remove('closed');
-      issleeping = true;
-      lookforwakeup();
-    }, 350);
   }
-});
-
-function lookforwakeup() {
-  clickwake = function () {wakeUp();};
-  movewake = function () {wakeUp();};
-  presswake = function () {wakeUp();};
-
-  document.addEventListener('click', clickwake);
-  document.addEventListener('mousemove', movewake);
-  document.addEventListener('keydown', presswake);
-}
-function wakeUp() {
-  setTimeout(() => {
-    sleepScreen.classList.add('closed');
-    issleeping = false;
-  }, 420);
-
-  document.removeEventListener('click', clickwake);
-  document.removeEventListener('mousemove', movewake);
-  document.removeEventListener('keydown', presswake);
-}
 
   function updateTime() {
     const now = new Date();
