@@ -1302,6 +1302,7 @@ a, p, h1, figcaption, em, li{
   .homemenu{
     height: auto;
     width: 60dvw; 
+    bottom: 5dvh;
   }
   #homemenubg{
     height: auto;
@@ -1359,6 +1360,7 @@ a, p, h1, figcaption, em, li{
   .sitenews{
     width: 50dvw;
     height: auto;
+    right: 4.9dvh;
   }
   .sitenewscontent:after {
     left: auto;
