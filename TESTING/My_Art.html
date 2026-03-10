@@ -66,7 +66,7 @@
   <audio id="Windows" src="./sounds/windows.mp3" preload="auto"></audio>
   <audio id="woowee" src="./sounds/woowee.mp3" preload="auto"></audio>
 
-  <!-- Intro --> 
+  <!-- Intro  
   <div class="Switch">
     <p style="background-color:#0e0e0e; padding: 0.3%; font-size: 1.5dvh;">Click to turn on computer</p>
     <p style="background-color:#0e0e0e; padding: 0.3%; transform: translate(-50%, 120%); font-size: 0.7dvh;">(F11 to forcefully toggle fullscreen mode)</p>
@@ -117,7 +117,7 @@
     <p class="P13"></p>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div> 
-
+  -->
 
 
   <div class="background">
@@ -718,7 +718,7 @@
 </body>
 
 
-<!-- Intro Animation -->
+<!-- Intro Animation 
 <script>
   const SgA = document.querySelector(".BlackHole");
   const SgACurtain = document.querySelector(".BlackHoleCurtain");
@@ -1190,7 +1190,7 @@
   }
 
 </script> 
-
+-->
 
 <!-- Desktop Logic -->
 <script>
@@ -1592,6 +1592,7 @@
       openhorizon(imagepath.textContent);
     });
     image.addEventListener("touchstart", e => {
+      e.stopPropagation();
       let imagepath = image.querySelector("p");
       doubleTouch(e, openhorizon, imagepath.textContent);
     });
