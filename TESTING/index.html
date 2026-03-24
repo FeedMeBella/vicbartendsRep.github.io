@@ -144,15 +144,25 @@
       <div id="Autumn">
         <img class="BackgroundTape" src="./assets/Autumn.png" alt="cassete" draggable="false">
         <p class="MTTitle"> - Autumn - </p>
-        <pre class="MTTrackList"> 
-|| I am a song - Made by this artist || 3:01 
-|| this is also a song - Made by this artist || 3:01
-|| song? - Made by this artist || 3:01
-|| Ig - Made by this artist || 3:01
-|| I am a songas - Made by this artist || 3:01
-|| I am a song - Made by this artist || 3:01 
-        </pre>
+        <pre class="MTTrackList">Autumn isn't finished with her mixtape yet.</pre>
+      </div>
 
+      <div id="Spring">
+        <img class="BackgroundTape" src="./assets/Spring.png" alt="cassete" draggable="false">
+        <p class="MTTitle"> - Spring - </p>
+        <pre class="MTTrackList">Tracklisthere</pre>
+      </div>
+
+      <div id="Summer">
+        <img class="BackgroundTape" src="./assets/Summer.png" alt="cassete" draggable="false">
+        <p class="MTTitle"> - Summer - </p>
+        <pre class="MTTrackList">Summer isn't finished with her mixtape yet.</pre>
+      </div>
+
+      <div id="Winter">
+        <img class="BackgroundTape" src="./assets/Winter.png" alt="cassete" draggable="false">
+        <p class="MTTitle"> - Winter - </p>
+        <pre class="MTTrackList">Winter isn't finished with her mixtape yet.</pre>
       </div>
 
       <div id="ihabk">
@@ -674,6 +684,9 @@ function startMenuLogic() {
 <script>
   const screen = document.querySelector('.OVRL');
   const Autumn = document.getElementById('Autumn');
+  const Spring = document.getElementById('Spring');
+  const Summer = document.getElementById('Summer');
+  const Winter = document.getElementById('Winter');
   const ihabk = document.getElementById('ihabk');
   const vela = document.getElementById('vela');
 
@@ -708,6 +721,9 @@ function startMenuLogic() {
       MTD.forEach(MTD => MTD.style = "opacity: 1")
       MTTL.forEach(MTTL => MTTL.style = "opacity: 0");
       Autumn.style = "display: none";
+      Spring.style = "display: none";
+      Summer.style = "display: none";
+      Winter.style = "display: none";
       ihabk.style = "display: none";
       vela.style = "display: none";
       stage = 0;
@@ -724,16 +740,22 @@ function startMenuLogic() {
   MTSpring.addEventListener('click', (checkingoutmymixtape) => {
     screen.style.display = "block";
     requestAnimationFrame(() => {screen.style.opacity = "1";});
+
+    Spring.style.display = "block";
   });
 
   MTSummer.addEventListener('click', (checkingoutmymixtape) => {
     screen.style.display = "block";
     requestAnimationFrame(() => {screen.style.opacity = "1";});
+
+    Summer.style.display = "block";
   });
 
   MTWinter.addEventListener('click', (checkingoutmymixtape) => {
     screen.style.display = "block";
     requestAnimationFrame(() => {screen.style.opacity = "1";});
+
+    Winter.style.display = "block";
   });
 
   MTVela.addEventListener('click', (checkingoutmymixtape) => {

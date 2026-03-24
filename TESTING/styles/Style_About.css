@@ -11,11 +11,14 @@ body, html {
     margin:0;
     padding:0;
     overflow: hidden;
-    cursor: url(../assets/CursorAbout.cur), default;
+    cursor: url(../assets/CursorAbout1.png) 0 1, default;
 }
 a, p, h1, figcaption, em, li{
   text-decoration: none;
   font-family: "VA-11 Hall-A 6px Non-mono";
+}
+a{
+  cursor: url(../assets/CursorAbout2.png) 5 0, default;
 }
 
 .LOGO{
@@ -43,6 +46,7 @@ a, p, h1, figcaption, em, li{
 .back2index img{
   height: 15vh;
   width: auto;
+  cursor: url(../assets/CursorAbout2.png) 5 0, default;
 }
 
 .About {

@@ -13,12 +13,9 @@ body {
   height: 100dvh;
   background-image: url(../assets/RamblesBG.png);
   background-size: 10%;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;    
-  -ms-user-select: none; 
   overflow-x: hidden;
   overflow-y: scroll;
+  cursor: url(../assets/CursorRambles1.png), default;
 }
 .backgroundborder{
   position: relative;
@@ -45,13 +42,19 @@ h1{
 }
 p, span{
  font-family: "Lucida Console", "Courier New", monospace;
+ cursor: url(../assets/CursorRambles3.png) 7 16, default;
+}
+a{
+  cursor: url(../assets/CursorRambles2.png) 10 2, default;
 }
 span{
   padding: 0.5rem;  
   color: -webkit-link;
   text-decoration: underline;
-  cursor: pointer;
   font-size: 1rem;
+}
+pre {
+  cursor: url(../assets/CursorRambles3.png) 7 16, default;
 }
 #go-back{
   padding-left: 1dvh;

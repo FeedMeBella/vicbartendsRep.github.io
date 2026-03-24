@@ -388,7 +388,7 @@ a, p, h1, figcaption, em, li{
   transform: translateX(-50%) translateY(-50%);
   transition: all 0.5s ease-out;
 }
-#Autumn, #ihabk, #vela{
+#Autumn, #Spring, #Summer, #Winter, #ihabk, #vela{
   display: none;
 }
 #MTD{
