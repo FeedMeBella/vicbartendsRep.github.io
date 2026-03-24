@@ -376,6 +376,7 @@ a, p, h1, figcaption, em, li{
   left: 50%;
   top: 60%;
   transform: translateX(-50%) translateY(-30%);
+  text-wrap: nowrap;
   transition: all 0.5s ease-out;
 }
 .MTTrackList{
@@ -396,6 +397,10 @@ a, p, h1, figcaption, em, li{
 }
 #MTD{
   opacity: 1;
+}
+#ihabktl{
+  max-height: 70%;
+  max-width: 95%;
 }
 
 /* Graffiti */
@@ -641,6 +646,12 @@ a, p, h1, figcaption, em, li{
     right: 69.7%;
     height: 14.4dvw;
   }
+  .MTTitle{
+    font-size: 4.5dvw;
+  }
+  .MTTrackList{
+    font-size: 2dvh;
+  }
 
   /* Graffiti */
   .leonorgraffiti{
@@ -729,6 +740,14 @@ a, p, h1, figcaption, em, li{
   margin-bottom: 9%;
   margin-left: 5%;
   font-size: 5vw;
+  }
+
+  /* Mixtapes */
+  .BackgroundTape{
+    height: 50dvw;
+  }
+  .MTTrackList{
+    font-size: 3.5dvw;
   }
 }
 

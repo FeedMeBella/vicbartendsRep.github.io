@@ -168,7 +168,7 @@
       <div id="ihabk">
         <img class="BackgroundTape" id="MixtapeDissapear" src="./assets/Ihaveabloodkink.png" alt="USB drive" draggable="false">
         <p class="MTTitle" id="MixtapeDissapear"> - I have a blood kink (I do, it's true) - </p>
-        <img class="MTTrackList" src="./assets/Ihaveabloodkink_tracklist.png" draggable="false"> 
+        <img class="MTTrackList" id="ihabktl" src="./assets/Ihaveabloodkink_tracklist.png" draggable="false"> 
       </div>
 
       <div id="vela">
@@ -714,7 +714,7 @@ function startMenuLogic() {
         BGT.forEach(BGT => {BGT.style.left = "35%"; BGT.style.top = "20%";});
         MTT.forEach(MTT => {MTT.style.left = "65%"; MTT.style.top = "15%";});
       }
-      MTD.forEach(MTD => MTD.style = "opacity: 0")
+      if (!isTablet()) {MTD.forEach(MTD => MTD.style = "opacity: 0")};
       MTTL.forEach(MTTL => MTTL.style = "opacity: 1");
       stage++;
     }
