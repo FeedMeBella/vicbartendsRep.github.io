@@ -371,11 +371,11 @@ a, p, h1, figcaption, em, li{
 .MTTitle{
   position: absolute;
   color:rgb(161, 161, 161);
-  font-size: 5dvh;
+  font-size: 4.5dvh;
   opacity: 1;
   left: 50%;
   top: 60%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-30%);
   transition: all 0.5s ease-out;
 }
 .MTTrackList{
@@ -387,6 +387,9 @@ a, p, h1, figcaption, em, li{
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   transition: all 0.5s ease-out;
+}
+#velafix{
+  transform: translateX(-54%) translateY(-55%);
 }
 #Autumn, #Spring, #Summer, #Winter, #ihabk, #vela{
   display: none;

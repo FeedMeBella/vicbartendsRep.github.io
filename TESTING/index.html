@@ -172,7 +172,7 @@
       </div>
 
       <div id="vela">
-        <img class="BackgroundTape" src="./assets/Vela.png" alt="CD" draggable="false">
+        <img id="velafix" class="BackgroundTape" src="./assets/Vela.png" alt="CD" draggable="false">
         <p class="MTTitle"> - Vela - </p>
         <img class="MTTrackList" src="" draggable="false"> 
       </div>
@@ -213,15 +213,13 @@
   <audio id="donaranha" src="sounds/vicpotenusa_atmos_thingy.mp3" preload="auto"></audio>
 
 
-<!-- Size logic DELETE ME -->
+<!-- Is phone -->
 <script>
-  function setVh() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  let phonefactor = 1;
+  function isTablet() {
+    return window.matchMedia("(pointer: coarse)").matches;
   }
-
-  window.addEventListener('resize', setVh);
-  window.addEventListener('load', setVh);
+  window.addEventListener("resize", isTablet);
 </script>
 
 <!-- Start Logic -->
@@ -708,8 +706,14 @@ function startMenuLogic() {
 
   screen.addEventListener('click', (goodbye) => {
     if (stage == 0){
-      BGT.forEach(BGT => {BGT.style.left = "35%"; BGT.style.top = "20%";});
-      MTT.forEach(MTT => {MTT.style.left = "60%"; MTT.style.top = "15%";});
+      if (isTablet()){
+        BGT.forEach(BGT => {BGT.style.left = "50%"; BGT.style.top = "15%";});
+        MTT.forEach(MTT => {MTT.style.left = "50%"; MTT.style.top = "24%";});
+      }
+      else {
+        BGT.forEach(BGT => {BGT.style.left = "35%"; BGT.style.top = "20%";});
+        MTT.forEach(MTT => {MTT.style.left = "65%"; MTT.style.top = "15%";});
+      }
       MTD.forEach(MTD => MTD.style = "opacity: 0")
       MTTL.forEach(MTTL => MTTL.style = "opacity: 1");
       stage++;
