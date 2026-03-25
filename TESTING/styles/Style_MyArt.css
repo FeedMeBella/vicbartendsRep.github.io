@@ -4,6 +4,7 @@
          url("../font/amiga-topaz.woff") format("woff"),
          url("../font/amiga-topaz.otf") format("opentype"),
          url("../font/amiga-topaz.ttf") format("truetype");
+    font-display: block;
 }
 @font-face {
     font-family: 'typewriter';

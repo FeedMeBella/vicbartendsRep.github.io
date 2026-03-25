@@ -108,9 +108,9 @@
         <img class="Mixtape SUMM pointer" src="./assets/Summer.png" alt="cassete" draggable="false">
         <img class="Mixtape WNTR pointer" src="./assets/Winter.png" alt="cassete" draggable="false">
         <img class="Mixtape VELA pointer" src="./assets/Vela.png" alt="CD" draggable="false">
-        <img class="Mixtape TRCK pointer" src="./assets/Tracker.png" alt="FDisk" draggable="false">
+        <!-- <img class="Mixtape TRCK pointer" src="./assets/Tracker.png" alt="FDisk" draggable="false"> -->
         <img class="Mixtape IHBK pointer" src="./assets/Ihaveabloodkink.png" alt="PenD" draggable="false">
-        <img class="Mixtape ELZBT pointer" src="./assets/Elizabeth.png" alt="Vinyl" draggable="false">
+        <!-- <img class="Mixtape ELZBT pointer" src="./assets/Elizabeth.png" alt="Vinyl" draggable="false"> -->
 
         <img class="bartender pointer" id="bartenderVic" src="./assets/VicGif.png" alt="Bartender" draggable="false">
         <img class="bartender pointer" id="bartenderLyria" src="./assets/LyriaGif.png" alt="Bartender" draggable="false">
@@ -697,9 +697,9 @@ function startMenuLogic() {
   const MTSummer = document.querySelector('.SUMM');
   const MTWinter = document.querySelector('.WNTR');
   const MTVela = document.querySelector('.VELA');
-  const MTTracker = document.querySelector('.TRCK');
+  // const MTTracker = document.querySelector('.TRCK');
   const MTBloodkink = document.querySelector('.IHBK');
-  const MTElizabeth = document.querySelector('.ELZBT');
+  // const MTElizabeth = document.querySelector('.ELZBT');
 
   const BGT = document.querySelectorAll('.BackgroundTape');
   const MTT = document.querySelectorAll('.MTTitle');
@@ -776,10 +776,10 @@ function startMenuLogic() {
     vela.style.display = "block";
   });
 
-  MTTracker.addEventListener('click', (checkingoutmymixtape) => {
-    screen.style.display = "block";
-    requestAnimationFrame(() => {screen.style.opacity = "1";});
-  });
+  // MTTracker.addEventListener('click', (checkingoutmymixtape) => {
+  //   screen.style.display = "block";
+  //   requestAnimationFrame(() => {screen.style.opacity = "1";});
+  // });
 
   MTBloodkink.addEventListener('click', (checkingoutmymixtape) => {
     screen.style.display = "block";
@@ -788,10 +788,10 @@ function startMenuLogic() {
     ihabk.style.display = "block";
   });
 
-  MTElizabeth.addEventListener('click', (checkingoutmymixtape) => {
-    screen.style.display = "block";
-    requestAnimationFrame(() => {screen.style.opacity = "1";});
-  });
+  // MTElizabeth.addEventListener('click', (checkingoutmymixtape) => {
+  //   screen.style.display = "block";
+  //   requestAnimationFrame(() => {screen.style.opacity = "1";});
+  // });
 
 
 
@@ -803,11 +803,6 @@ function startMenuLogic() {
   const phoneicons = document.querySelector(".button-container");
   const chatroom = document.querySelector(".chatroom");
   const vicbartendschat = document.querySelector(".vicbartendschat");
-  const vicbartendsborderleft = document.querySelector(".vicbartendsborderlefttop");
-  const vicbartendsborderright = document.querySelector(".vicbartendsborderrighttop");
-  const vicbartendsborderleftbottom = document.querySelector(".vicbartendsborderleftbot");
-  const vicbartendsborderrightbottom = document.querySelector(".vicbartendsborderrightbot"); 
-  const vicbartendsdeets = document.querySelector(".vicbartendsdeets");
 
   let chatclosed = true
 

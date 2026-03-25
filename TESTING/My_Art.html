@@ -55,7 +55,6 @@
   <link href="maxisdreaming@vicbartends.com" rel="me">
   <link href="https://github.com/FeedMeBella" rel="me">
 
-  <link rel="preload" href="./sounds/bootsequence.mp3" as="audio">
   <link rel="preload" href="./font/amiga-topaz.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
@@ -1134,17 +1133,19 @@
   const Windows = document.getElementById("Windows");
   const woowee = document.getElementById("woowee");
 
-  Switch.onclick = (awoop) => {
-  
-  SwitchP.forEach(p => {p.style.visibility = "hidden";});
-  const thewholething = document.documentElement;
-  if (thewholething.requestFullscreen) {
-    thewholething.requestFullscreen();
-  } else if (thewholething.webkitRequestFullscreen) { 
-   thewholething.webkitRequestFullscreen();
-  } else if (thewholething.msRequestFullscreen) {
-   thewholething.msRequestFullscreen();
-  }
+  Switch.addEventListener('click', Wait4Boot);
+    
+  function Wait4Boot(){
+    Switch.removeEventListener('click', Wait4Boot);
+    SwitchP.forEach(p => {p.style.visibility = "hidden";});
+    const thewholething = document.documentElement;
+    if (thewholething.requestFullscreen) {
+      thewholething.requestFullscreen();
+    } else if (thewholething.webkitRequestFullscreen) { 
+    thewholething.webkitRequestFullscreen();
+    } else if (thewholething.msRequestFullscreen) {
+    thewholething.msRequestFullscreen();
+    }
 
     function startBootUp() {
       BootUp.removeEventListener("canplaythrough", startBootUp);
@@ -1160,18 +1161,17 @@
         BootUpLoop.loop = true;
         BootUpLoop.play().catch(err => console.warn("Autoplay prevented:", err));
       });
-    }
+    };
 
-
-    const fontReady = document.fonts.load("16px amiga-topaz");
-    if (BootUp.readyState >= 4) {
+    const fontReady = document.fonts.load('16px "amiga-topaz"');
+    if (BootUp.readyState >= 3) {
       fontReady.then(startBootUp);
     } else {
       BootUp.addEventListener("canplaythrough", () => {
         fontReady.then(startBootUp);
       }, { once: true });
     }
-  };
+  }; 
 
   function fadeOutAudio(audio, duration = 2000) {
     const stepTime = 50; // ms per step
@@ -1188,7 +1188,7 @@
         clearInterval(fadeInterval);
       }
     }, stepTime);
-  }
+  };
 
 </script> 
 
