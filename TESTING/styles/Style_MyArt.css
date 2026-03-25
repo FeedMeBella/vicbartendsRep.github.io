@@ -276,7 +276,7 @@ a, p, h1, figcaption, em, li{
   left: 0;
   bottom: 5.5dvh; 
   opacity: 0;
-  transition: all 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
 }
 #homemenubg{
   position: absolute;
@@ -293,7 +293,6 @@ a, p, h1, figcaption, em, li{
   bottom: 0;
   left: 0;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(110, 0, 0));
-  transition: all 0.1s;
 }
 #reboot{
   position: absolute;
@@ -302,7 +301,6 @@ a, p, h1, figcaption, em, li{
   bottom: 9.2dvh;
   left: 0;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(5, 145, 174));
-  transition: all 0.1s;
 }
 #sleep{
   position: absolute;
@@ -311,7 +309,6 @@ a, p, h1, figcaption, em, li{
   bottom: 18.7dvh;
   left: 0;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
-  transition: all 0.1s;
 }
 .sleepscreen{
   position: fixed;
@@ -323,15 +320,6 @@ a, p, h1, figcaption, em, li{
 #shutdown:hover, #reboot:hover , #sleep:hover{
   transform: scale(1.1) translateX(4%);
   z-index: 2;
-}
-#png1{
-  position: absolute;
-  width: auto;
-  height: 10%;
-  bottom: 30dvh;
-  left: 55%;
-  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
-  transition: all 0.1s;
 }
 .tbicons{
   position: absolute;
@@ -572,6 +560,16 @@ a, p, h1, figcaption, em, li{
   text-decoration: underline;
   margin-top: 3%;
   margin-bottom: 0;
+}
+
+/* Pngs */
+#png1{
+  position: absolute;
+  width: auto;
+  height: 10%;
+  bottom: 40%;
+  left: 22dvh;
+  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
 }
 
 /* Program */

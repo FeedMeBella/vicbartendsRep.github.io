@@ -42,16 +42,21 @@ h1{
 }
 p, span{
  font-family: "Lucida Console", "Courier New", monospace;
- cursor: url(../assets/CursorRambles3.png) 7 16, default;
+}
+p{
+  cursor: url(../assets/CursorRambles3.png) 7 16, default;
 }
 a{
   cursor: url(../assets/CursorRambles2.png) 10 2, default;
+  color: #0000EE;
 }
 span{
   padding: 0.5rem;  
   color: -webkit-link;
   text-decoration: underline;
   font-size: 1rem;
+  cursor: url(../assets/CursorRambles2.png) 10 2, default;
+  color: #0000EE;
 }
 pre {
   cursor: url(../assets/CursorRambles3.png) 7 16, default;
@@ -64,7 +69,7 @@ pre {
 }
 #back2top{
   text-align: right;
-  padding: 0dvh 1dvh 2dvh
+  padding: 0dvh 1dvh 2dvh;
 }
 #back2top span:hover, a:hover{
   color: rgb(248, 41, 255);
@@ -99,8 +104,8 @@ pre {
   font-family: monospace;
 }
 .ramble p{
-  margin: 4dvh;
-  font-size: 1.2rem;
+  margin: 3dvh 4dvh;
+  font-size: 1.1rem;
   text-indent: 2rem;
   font-family: 'Courier New', Courier, monospace;
 }

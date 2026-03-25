@@ -379,6 +379,20 @@ a, p, h1, figcaption, em, li{
   text-wrap: nowrap;
   transition: all 0.5s ease-out;
 }
+.MTLink{
+  position: absolute;
+  display: flex;
+  /* opacity: 0; */
+  bottom: 3%;
+  height: 10%;  
+  width: 100%;
+  gap: 5%;
+  justify-content: center;
+}
+.MTLink img{
+  height: 100%;
+  width: auto;
+}
 .MTTrackList{
   position: absolute;
   color:rgb(198, 198, 198);
@@ -399,7 +413,7 @@ a, p, h1, figcaption, em, li{
   opacity: 1;
 }
 #ihabktl{
-  max-height: 70%;
+  max-height: 80%;
   max-width: 95%;
 }
 

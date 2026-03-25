@@ -1815,6 +1815,8 @@
     mkon.classList.add("hide");
     mkoff.classList.remove("hide");
   });
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
   
   // ONOFF Controls
   onoff.addEventListener("mousedown", () => {
@@ -2093,10 +2095,10 @@
           MK_Frame.classList.add("minimized");
           mkminimized = true;
           // Hello.pause();
-        // planetearth.pause(); 
-        // disk.style.animation = "none";
-        // mkplaying = false; 
-        //Make the layer logic
+          // planetearth.pause(); 
+          // disk.style.animation = "none";
+          // mkplaying = false; 
+          //Make the layer logic
         }
         else{
           refocus(MK_Frame);}
@@ -2306,9 +2308,3 @@
 
 
 </html>
-
-
-
-
-
-
