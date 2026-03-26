@@ -54,12 +54,11 @@
   </head>
 
   <body>
+    <audio id="BSS1" src="sounds/BSSelect1.mp3"></audio>
+    <audio id="BSS2" src="sounds/BSSelect2.mp3"></audio>
     <div id="loading">
       <pre id="loadingtext"></pre>
-
       <div class="Bartenderselect">
-        <audio id="BSS1" src="sounds/BSSelect1.mp3"></audio>
-        <audio id="BSS2" src="sounds/BSSelect2.mp3"></audio>
         <h1 class="BSTitle">
           <span>C</span><span>h</span><span>o</span><span>o</span><span>s</span><span>e</span>
           <span></span>
@@ -317,7 +316,8 @@ function onLoadingComplete() {
     console.info(selectedbartender + " selected!");
     StartBartender(); //this makes it sound like they're programs lol.
     showRandomAd(); 
-    setTimeout(() => {loader.classList.add("hide");}, 500);
+    setTimeout(() => {loader.style.opacity = "0"}, 100);
+    setTimeout(() => {loader.remove(); startMenuLogic();}, 600);
 
     window.skipNextBlur = false;
 
@@ -338,13 +338,7 @@ function onLoadingComplete() {
         BGmusic.play();
       }
     });
-
-    loader.addEventListener('transitionend', (e) => {
-      if (e.propertyName === "opacity") {
-        loader.remove();
-        startMenuLogic();
-      }
-    }, { once: true });
+    
   }
 
   function bartenderselect() {

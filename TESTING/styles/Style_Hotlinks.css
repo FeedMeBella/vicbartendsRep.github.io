@@ -14,7 +14,7 @@ body, html {
     padding:0;
     overflow: hidden;
 }
-a, p, h1, figcaption, em, li{
+a, p, h1, h3, figcaption, em, li{
   text-decoration: none;
   font-family: "VA-11 Hall-A 6px Non-mono";
 }
@@ -148,22 +148,26 @@ a, p, h1, figcaption, em, li{
   align-items: center;
 }
 .Hotlist a {
-  color: #ffe600;  
-  text-shadow: -1px 2px 2px #ff9d9d;   
-  font-style: bold;
-  font-size: larger;
+  color: #fbe200;  
+  text-shadow: -2px 3px 3px #ea8b8b;   
+  font-weight: bold;
+  font-size: 1.2rem;
   text-decoration: underline;
+  margin-top: 0.1%;
 }
-.Hotlist .description {
+.description {
   padding-left: 1%;
   color: #ffffff;
   text-shadow: -2px 2px 1px #000000;
 }
-.vicbutton img{
+h3{
   position: relative;
-  top: 420%;
-  left: 50%;
-  transform: translateX(-50%)
+  list-style: none;
+  width: 100vw;
+  top: 15%;
+  text-align: center;
+  color: #faeee0;
+  text-shadow: 2px 2px 4px #efb2b2;
 }
 
 /* Tablet Mode */
@@ -207,14 +211,9 @@ a, p, h1, figcaption, em, li{
     width: 300px;
   }
   .Hottitle{
-    position: relative;
-    list-style: none;
-    width: 100vw;
-    font-size: 7vw;
-    top: 15%;
-    text-align: center;
-    color: #49f9ff;
-    text-shadow: 2px 2px 4px #ff0000;
+    width: 90vw;
+    font-size: 6.5vw;
+    text-wrap: nowrap;
   }
 }
 
@@ -236,7 +235,7 @@ a, p, h1, figcaption, em, li{
 
 /* scrolbar */
 .hot-wrapper::-webkit-scrollbar {
-  width: 1vh;
+  width: 0.5vh;
 }
 .hot-wrapper::-webkit-scrollbar-track {
   background: rgb(0, 19, 6); 

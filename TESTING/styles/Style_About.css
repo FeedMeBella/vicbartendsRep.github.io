@@ -118,6 +118,19 @@ a{
 .ContactCredits p{
   margin: 1.5% 0%;
 }
+.button{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: url(../assets/CursorAbout2.png) 5 0, default;
+}
+.buttonhint{
+  text-align: center;
+}
+.buttonhint p{
+  margin: 0;
+}
+
 .BGS1, .BGS2, .BGS3, .BGS4, .BGS5,
 .BGS6, .BGS7, .BGS8, .BGS9, .BGS10 {
   position: fixed;
