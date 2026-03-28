@@ -149,7 +149,7 @@
       <div id="Spring">
         <img class="BackgroundTape" src="./assets/Spring.png" alt="cassete" draggable="false">
         <p class="MTTitle"> - Spring - </p>
-        <pre class="MTTrackList">Tracklisthere</pre>
+        <img class="MTTrackList" id="springtl" src="./assets/Spring_tracklist.png" draggable="false"> 
         <div class="MTLink">
           <a class="MTYouLink"><img src="./assets/MixYoutube.png" alt="Mixtape on Youtube"></a> 
           <a class="MTSpotLink"><img src="./assets/MixSpot.png" alt="Mixtape on Spotify"></a>
@@ -725,6 +725,7 @@ function startMenuLogic() {
       MTT.forEach(MTT => {MTT.style.left = "50%"; MTT.style.top = "60%";});
       MTD.forEach(MTD => MTD.style = "opacity: 1")
       MTTL.forEach(MTTL => MTTL.style = "opacity: 0");
+      MTLK.forEach(MTLK => MTLK.style = "opacity: 0");
       Autumn.style = "display: none";
       Spring.style = "display: none";
       Summer.style = "display: none";
