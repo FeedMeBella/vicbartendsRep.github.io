@@ -127,7 +127,6 @@ a, p, h1, h3, figcaption, em, li{
 }
 .Hottitle{
   position: relative;
-  list-style: none;
   width: 100vw;
   top: 15%;
   text-align: center;
@@ -138,7 +137,7 @@ a, p, h1, h3, figcaption, em, li{
   position: relative;
   list-style: none;
   width: 100%;
-  max-width: 150vh;
+  max-width: 150dvh;
   top: 15%;
   margin: 0 auto;
 }
@@ -211,9 +210,11 @@ h3{
     width: 300px;
   }
   .Hottitle{
-    width: 90vw;
-    font-size: 6.5vw;
+    font-size: 6.5dvw;
     text-wrap: nowrap;
+  }
+  #crackalacking{
+    font-size: 3.5dvw;
   }
 }
 
