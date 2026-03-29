@@ -369,6 +369,16 @@ a, p, h1, figcaption, em, li{
   transform: translateX(-50%) translateY(-50%);
   transition: all 0.5s ease-out;
 }
+.BackgroundTapeVela{
+  position: absolute;
+  width: 36dvh;
+  height: auto;
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-54%) translateY(-55%);
+  transition: all 1.4s ease-out;
+}
 .MTTitle{
   position: absolute;
   color:rgb(161, 161, 161);
@@ -408,9 +418,6 @@ a, p, h1, figcaption, em, li{
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   transition: all 0.5s ease-out;
-}
-#velafix{
-  transform: translateX(-54%) translateY(-55%);
 }
 #Autumn, #Spring, #Summer, #Winter, #ihabk, #vela{
   display: none;
@@ -683,6 +690,9 @@ a, p, h1, figcaption, em, li{
   #springtl{
     transform: translateX(-50%) translateY(-30%);
     height: 50%;
+  }
+  .VelaTitleFix{
+    transform: translateX(-50%) translateY(30%);
   }
 
   /* Graffiti */

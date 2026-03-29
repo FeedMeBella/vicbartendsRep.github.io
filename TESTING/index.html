@@ -51,6 +51,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="maxisdreaming@vicbartends.com" rel="me">
     <link href="https://github.com/FeedMeBella" rel="me">
+
+    <link rel="preload" as="image" href="./assets/Vela_tracklist.png">
   </head>
 
   <body>
@@ -179,9 +181,12 @@
       </div>
 
       <div id="vela">
-        <img id="velafix" class="BackgroundTape" src="./assets/Vela.png" alt="CD" draggable="false">
-        <p class="MTTitle"> - Vela - </p>
-        <img class="MTTrackList" src="" draggable="false"> 
+        <img class="BackgroundTapeVela" src="./assets/Vela.png" alt="CD" draggable="false">
+        <p class="MTTitle VelaTitleFix" id="MixtapeDissapear"> - Vela - </p>
+        <div class="MTLink">
+          <a class="MTYouLink" href="" target="_blank"><img src="./assets/MixYoutube.png" alt="Mixtape on Youtube"></a> 
+          <a class="MTSpotLink" href="https://open.spotify.com/playlist/4frK9knsaltPTBwO0aiP4p?si=a4fa56149e9a4eec" target="_blank"><img src="./assets/MixSpot.png" alt="Mixtape on Spotify"></a>
+        </div>
       </div>
     </div>
 
@@ -700,6 +705,7 @@ function startMenuLogic() {
   // const MTElizabeth = document.querySelector('.ELZBT');
 
   const BGT = document.querySelectorAll('.BackgroundTape');
+  const BGTVela = document.querySelector('.BackgroundTapeVela');
   const MTT = document.querySelectorAll('.MTTitle');
   const MTD = document.querySelectorAll('#MixtapeDissapear');
   const MTTL = document.querySelectorAll('.MTTrackList');
@@ -712,14 +718,18 @@ function startMenuLogic() {
       if (isTablet()){
         BGT.forEach(BGT => {BGT.style.left = "50%"; BGT.style.top = "15%";});
         MTT.forEach(MTT => {MTT.style.left = "50%"; MTT.style.top = "24%";});
+        BGTVela.style.width = "95dvw  ";
       }
       else {
         BGT.forEach(BGT => {BGT.style.left = "35%"; BGT.style.top = "20%";});
         MTT.forEach(MTT => {MTT.style.left = "65%"; MTT.style.top = "15%";});
+        BGTVela.style.width = "80dvh";
       }
       if (!isTablet()) {MTD.forEach(MTD => MTD.style = "opacity: 0")};
       MTTL.forEach(MTTL => MTTL.style = "opacity: 1");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 1");
+      BGTVela.src = "./assets/VelaFlip.gif";
+      setTimeout(() => {BGTVela.src = "./assets/Vela_tracklist.png";}, 1440);
 
       stage++;
     }
@@ -730,6 +740,8 @@ function startMenuLogic() {
       MTD.forEach(MTD => MTD.style = "opacity: 1")
       MTTL.forEach(MTTL => MTTL.style = "opacity: 0");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 0");
+      BGTVela.src = "./assets/Vela.png";
+      BGTVela.style.width = "";
       Autumn.style = "display: none";
       Spring.style = "display: none";
       Summer.style = "display: none";
