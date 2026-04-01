@@ -713,6 +713,7 @@ function startMenuLogic() {
   const MTLK =document.querySelectorAll('.MTLink');
 
   let stage = 0;
+  let finalVelaTime;
 
   screen.addEventListener('click', (goodbye) => {
     if (stage == 0){
@@ -725,12 +726,12 @@ function startMenuLogic() {
         BGT.forEach(BGT => {BGT.style.left = "35%"; BGT.style.top = "20%";});
         MTT.forEach(MTT => {MTT.style.left = "65%"; MTT.style.top = "15%";});
         BGTVela.style.width = "80dvh";
+        MTD.forEach(MTD => MTD.style = "opacity: 0");
       }
-      if (!isTablet()) {MTD.forEach(MTD => MTD.style = "opacity: 0")};
       MTTL.forEach(MTTL => MTTL.style = "opacity: 1");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 1");
       BGTVela.src = "./assets/VelaFlip.gif";
-      setTimeout(() => {BGTVela.src = "./assets/Vela_tracklist.png";}, 1440);
+      finalVelaTime = setTimeout(() => {BGTVela.src = "./assets/Vela_tracklist.png";}, 1440);
 
       stage++;
     }
@@ -741,6 +742,8 @@ function startMenuLogic() {
       MTD.forEach(MTD => MTD.style = "opacity: 1")
       MTTL.forEach(MTTL => MTTL.style = "opacity: 0");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 0");
+      BGTVela.src = "";
+      clearTimeout(finalVelaTime);
       BGTVela.src = "./assets/Vela.png";
       BGTVela.style.width = "";
       Autumn.style = "display: none";
