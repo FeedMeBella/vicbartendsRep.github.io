@@ -183,7 +183,7 @@
 
       <div id="vela">
         <img class="BackgroundTapeVela" src="./assets/Vela.png" alt="CD" draggable="false">
-        <p class="MTTitle VelaTitleFix" id="MixtapeDissapear"> - Vela - </p>
+        <p class="MTTitle VelaTitleFix"> - Vela - </p>
         <div class="MTLink">
           <a class="MTYouLink" href="" target="_blank"><img src="./assets/MixYoutube.png" alt="Mixtape on Youtube"></a> 
           <a class="MTSpotLink" href="https://open.spotify.com/playlist/4frK9knsaltPTBwO0aiP4p?si=a4fa56149e9a4eec" target="_blank"><img src="./assets/MixSpot.png" alt="Mixtape on Spotify"></a>
@@ -709,6 +709,7 @@ function startMenuLogic() {
   const BGTVela = document.querySelector('.BackgroundTapeVela');
   const MTT = document.querySelectorAll('.MTTitle');
   const MTD = document.querySelectorAll('#MixtapeDissapear');
+  const MTDvela = document.querySelector('.VelaTitleFix');
   const MTTL = document.querySelectorAll('.MTTrackList');
   const MTLK =document.querySelectorAll('.MTLink');
 
@@ -720,7 +721,7 @@ function startMenuLogic() {
       if (isTablet()){
         BGT.forEach(BGT => {BGT.style.left = "50%"; BGT.style.top = "15%";});
         MTT.forEach(MTT => {MTT.style.left = "50%"; MTT.style.top = "24%";});
-        BGTVela.style.width = "95dvw  ";
+        BGTVela.style.width = "95dvw";
       }
       else {
         BGT.forEach(BGT => {BGT.style.left = "35%"; BGT.style.top = "20%";});
@@ -730,6 +731,7 @@ function startMenuLogic() {
       }
       MTTL.forEach(MTTL => MTTL.style = "opacity: 1");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 1");
+      MTDvela.style = "opacity: 0";
       BGTVela.src = "./assets/VelaFlip.gif";
       finalVelaTime = setTimeout(() => {BGTVela.src = "./assets/Vela_tracklist.png";}, 1440);
 
@@ -739,7 +741,8 @@ function startMenuLogic() {
       screen.style = "display: none";
       BGT.forEach(BGT => {BGT.style.left = "50%"; BGT.style.top = "50%";});
       MTT.forEach(MTT => {MTT.style.left = "50%"; MTT.style.top = "60%";});
-      MTD.forEach(MTD => MTD.style = "opacity: 1")
+      MTD.forEach(MTD => MTD.style = "opacity: 1");
+      MTDvela.style = "opacity: 1";
       MTTL.forEach(MTTL => MTTL.style = "opacity: 0");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 0");
       BGTVela.src = "";
