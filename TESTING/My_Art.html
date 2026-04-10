@@ -62,8 +62,12 @@
   <audio id="BootUp" src="./sounds/bootsequence.mp3" preload="auto"></audio>
   <audio id="BootUpLoop" src="./sounds/bootsequenceloop.mp3" preload="auto"></audio>
   <audio id="Beep" src="./sounds/Beep.mp3" preload="auto"></audio>
-  <audio id="Windows" src="./sounds/windows.mp3" preload="auto"></audio>
+  <audio id="EnterSound" src="./sounds/Enter.mp3" preload="auto"></audio>
   <audio id="woowee" src="./sounds/woowee.mp3" preload="auto"></audio>
+  <audio id="OpenProgram" src="./sounds/OpenProgram.mp3" preload="auto"></audio>
+  <audio id="CloseProgram" src="./sounds/CloseProgram.mp3" preload="auto"></audio>
+  <audio id="HomeSound" src="./sounds/HomeMenu.mp3" preload="auto"></audio>
+  <audio id="Untrash" src="./sounds/UnTrash.mp3" preload="auto"></audio>
 
   <!-- Intro -->
   <div class="Switch">
@@ -894,12 +898,13 @@
       P13.innerHTML += "rtends.OS ..."
     }, speed * 4050);
     setTimeout(() => {
+      EnterSound.play().catch(err => {console.warn("Autoplay prevented:", err);});
+    }, speed * 4350);
+    setTimeout(() => {
       BIOS.classList.add("fade");
       fadeOutAudio(BootUp, 1000);
       fadeOutAudio(BootUpLoop, 1000);
-      Windows.play().catch(err => {
-        console.warn("Autoplay prevented:", err);
-      });
+
     }, speed * 4500);
   }
 
@@ -1130,7 +1135,7 @@
   const BootUp = document.getElementById("BootUp");
   const BootUpLoop = document.getElementById("BootUpLoop");
   const Beep = document.getElementById("Beep");
-  const Windows = document.getElementById("Windows");
+  const EnterSound = document.getElementById("EnterSound");
   const woowee = document.getElementById("woowee");
 
   Switch.addEventListener('click', Wait4Boot);
@@ -1215,6 +1220,9 @@
 
   function addTaskbarIcon(tbid, tbsrc, tbalt) {
     const taskbarcontainer = document.querySelector(".tbicons");
+    OpenProgram.pause();
+    OpenProgram.currentTime = 0;
+    OpenProgram.play();
 
     const item = document.createElement("div");
     item.classList.add("tbitem");
@@ -1228,6 +1236,9 @@
     taskbarcontainer.appendChild(item);
   } //I need to get better at js so I can write stuff like this more easily. Before 2.45 I think I'll do a whole online coding class on js 
   function removeTaskbarIcon(tbid) {
+    CloseProgram.pause();
+    CloseProgram.currentTime = 0;
+    CloseProgram.play();
     const el = document.getElementById(tbid);
     if (el) el.remove();
   }
@@ -1309,6 +1320,11 @@
   const FE_content = document.querySelectorAll(".FEcontent");
   const FE_top = document.querySelectorAll(".topborder");
   const directory = document.querySelectorAll(".directory");
+
+  const OpenProgram = document.getElementById("OpenProgram");
+  const CloseProgram = document.getElementById("CloseProgram");
+  const Homesound = document.getElementById("HomeSound");
+  const Untrash = document.getElementById("Untrash");
   
   let maopen = false;
   let topen = false;
@@ -1755,6 +1771,7 @@
   });
 
   function untrashmankind () {
+    Untrash.play();
     icon_mankind.classList.remove("trash");
     restoremankind.style.display = "none";
   }
@@ -2173,13 +2190,17 @@
   let homeison = false;
   function openhome () {
      if (!homeison){
+      Homesound.pause();
+      Homesound.currentTime = 0;
+      Homesound.play();
       homemenu.classList.remove("closed");
       setTimeout(() => {homemenu.style.opacity = "1"}, 10);
       homeison = true;
     }
     else {
+      Homesound.pause();
+      Homesound.currentTime = 0;
       homemenu.style.opacity = "0"
-      
       setTimeout(() => {homemenu.classList.add("closed");}, 100);
       homeison = false;
     }
