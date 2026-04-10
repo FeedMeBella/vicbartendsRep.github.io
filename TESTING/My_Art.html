@@ -867,6 +867,7 @@
 
   let speed = 1;
   let loadedspeed = 0.3;
+  let finishedBoot = false;
 
   let pageLoaded = false;
   let progress = 0;
@@ -904,7 +905,7 @@
       BIOS.classList.add("fade");
       fadeOutAudio(BootUp, 1000);
       fadeOutAudio(BootUpLoop, 1000);
-
+      finishedBoot = true;
     }, speed * 4500);
   }
 
@@ -1385,6 +1386,7 @@
       FEThumbnail.forEach(item => {item.style.backgroundColor = ""});
     }
     if (!taskbar.contains(event.target)) {
+      homeison = false;
       homemenu.classList.add("closed");
     }
   });
@@ -1441,7 +1443,6 @@
       nightmode.src = "My_Art/VicBartends.OS/night mode button.png";
     }
   });
-  const thewholething = document.documentElement; //DELETE ME AFTER YOU'RE DONE!! repeated from intro 
   fullscreen.addEventListener("click", () => {
     if (!document.fullscreenElement) {
       if (thewholething.requestFullscreen) {
@@ -1471,13 +1472,18 @@
       volumeing = 0;
         planetearth.volume = volumeing * volume;
         Hello.volume = volumeing * volume;
-
+        OpenProgram.volume = volumeing;
+        CloseProgram.volume = volumeing;
+        Homesound.volume = volumeing;
     }
     else{
       volumebutton.src = "My_Art/VicBartends.OS/volumebutton.png"
       volumeing = 1;
         planetearth.volume = volumeing * volume;
         Hello.volume = volumeing * volume;
+        OpenProgram.volume = volumeing;
+        CloseProgram.volume = volumeing;
+        Homesound.volume = volumeing;
     }
   });
   const sitenews = document.querySelector(".sitenews");
@@ -2189,7 +2195,7 @@
 
   let homeison = false;
   function openhome () {
-     if (!homeison){
+     if (!homeison && finishedBoot){
       Homesound.pause();
       Homesound.currentTime = 0;
       Homesound.play();
