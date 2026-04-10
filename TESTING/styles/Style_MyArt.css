@@ -1252,7 +1252,7 @@ a, p, h1, figcaption, em, li{
   }
 
   #MA_Frame{
-    min-width: auto;
+    min-width: 87dvw;
     min-height: 30dvh;
     
     width: 90%;
@@ -1290,6 +1290,12 @@ a, p, h1, figcaption, em, li{
   }
   #P3a{
     font-size: 3vw;
+  }
+  #IV_Frame{
+    min-width: 38dvh;
+    top: 0.5%;    
+    left: 2%;
+    height: 20%;
   }
 
   .taskbar{
@@ -1365,6 +1371,10 @@ a, p, h1, figcaption, em, li{
     left: auto;
     right: 1.3dvh;
   }
+
+  .maximized{
+    height: 95dvh !important;
+  } 
 }
 
 /* Mobile Mode */
