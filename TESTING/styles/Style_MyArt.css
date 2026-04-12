@@ -89,6 +89,7 @@ a, p, h1, figcaption, em, li{
   z-index: 9999999;
   width: 100dvw;
   height: 100dvh;
+  cursor: pointer;
 }
 .Switch p{
   position: absolute;
@@ -257,6 +258,7 @@ a, p, h1, figcaption, em, li{
   border-bottom: none;
   border-color: rgba(78, 37, 20, 0.5);
   box-sizing: border-box;
+  cursor: pointer;
 }
 .homebutton img{
   position: absolute;
@@ -294,6 +296,7 @@ a, p, h1, figcaption, em, li{
   bottom: 0;
   left: 0;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(110, 0, 0));
+  cursor: pointer;
 }
 #reboot{
   position: absolute;
@@ -302,6 +305,7 @@ a, p, h1, figcaption, em, li{
   bottom: 9.2dvh;
   left: 0;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(5, 145, 174));
+  cursor: pointer;
 }
 #sleep{
   position: absolute;
@@ -310,6 +314,7 @@ a, p, h1, figcaption, em, li{
   bottom: 18.7dvh;
   left: 0;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
+  cursor: pointer;
 }
 .sleepscreen{
   position: fixed;
@@ -341,6 +346,7 @@ a, p, h1, figcaption, em, li{
   border-bottom: none;
   border-color: rgba(65, 43, 34, 0.5);
   box-sizing: border-box;
+  cursor: pointer;
 }
 .tbitem:hover{
   background-image: repeating-linear-gradient(to top, rgba(1, 1, 0, 0.347), rgba(1, 1, 0, 0.347) 7%, rgba(195, 162, 121, 0.347) 50%, rgba(195, 162, 121, 0.347) 100%)
@@ -386,6 +392,7 @@ a, p, h1, figcaption, em, li{
   border-style: solid;
   border-width: 0.15rem;
   border-color: rgba(52, 52, 52, 0.435);
+  cursor: pointer;
 }
 #fullscreen img:hover{
   background: rgba(0, 0, 0, 0.225);
@@ -409,6 +416,7 @@ a, p, h1, figcaption, em, li{
   border-top: none;
   border-bottom: none;
   border-right: none;
+  cursor: pointer;
 }
 #nightmode{
   border-right: rgb(78, 37, 20);
@@ -445,6 +453,7 @@ a, p, h1, figcaption, em, li{
 }
 .icon:hover{
   background-color: rgba(80, 174, 56, 0.3);
+  cursor: pointer;
 }
 .icon p{
   position: relative;
@@ -571,6 +580,7 @@ a, p, h1, figcaption, em, li{
   bottom: 40%;
   left: 22dvh;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
+  cursor: help;
 }
 
 /* Program */
@@ -615,6 +625,7 @@ a, p, h1, figcaption, em, li{
   top: 0.4dvh;
   right: 11.5dvh;
   background-color: rgba(54, 105, 121, 0.8);
+  cursor: pointer;
 }
 .FrameMin p{
   position:absolute;
@@ -660,6 +671,7 @@ a, p, h1, figcaption, em, li{
   top: 0.4dvh;
   right: 6dvh;
   background-color: rgba(161, 107, 20, 0.8);
+  cursor: pointer;
 }
 .FrameMax:hover{
   background-color: rgb(193, 123, 11);
@@ -672,6 +684,7 @@ a, p, h1, figcaption, em, li{
   top: 0.4dvh;
   right: 0.5dvh;
   background-color: rgba(148, 33, 33, 0.8);
+  cursor: pointer;
 }
 .FrameClose:hover{
   background-color: rgb(174, 11, 11);
@@ -817,6 +830,7 @@ a, p, h1, figcaption, em, li{
   margin: 1% 1%;
   will-change: transform;
   filter: drop-shadow(-0.3rem 0.3rem 0.2rem rgb(61, 30, 4));
+  cursor: pointer;
 }
 #MK_Switch0{
   position: absolute;
@@ -1025,6 +1039,7 @@ a, p, h1, figcaption, em, li{
 .folderscollumn img{
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 .folderscollumn img:hover{
   filter: brightness(90%);
@@ -1082,6 +1097,7 @@ a, p, h1, figcaption, em, li{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  cursor: pointer;
 }
 .thumbnail img{
   position: relative;
@@ -1177,6 +1193,7 @@ a, p, h1, figcaption, em, li{
   height: 100%;
   width: 7%;
   right: 0;
+  cursor: pointer;
 }
 #IV_navleft{
   position: absolute;
@@ -1185,6 +1202,7 @@ a, p, h1, figcaption, em, li{
   height: 100%;
   width: 7%;
   left: 0;
+  cursor: pointer;
 }
 #IV_navright h1{
   position: absolute;
