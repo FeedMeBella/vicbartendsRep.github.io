@@ -1099,6 +1099,7 @@ a, p, h1, figcaption, em, li{
   justify-content: flex-end;
   cursor: pointer;
 }
+
 .thumbnail img{
   position: relative;
   left: 50%;
@@ -1109,6 +1110,7 @@ a, p, h1, figcaption, em, li{
   filter: drop-shadow(0px 0px 0.3dvh #3f1c1c);
 }
 .thumbnail p{
+  position: relative;
   overflow: hidden;
   word-wrap: break-word;
   font-family: "monospace";
@@ -1116,7 +1118,18 @@ a, p, h1, figcaption, em, li{
   text-align: center;
   font-size: 0.7rem;
   margin-top: 5%;
+  margin-bottom: 0;
   height: 23%;
+}
+.thumbnail p::before{
+  position: absolute;
+  width: 100%;
+  height: 40%;    
+  left: 0;
+  bottom: 0;
+  content: '';
+  pointer-events: none;
+  background: linear-gradient(0deg, rgb(207, 209, 222) 0%, rgba(207, 209, 222, 0.233) 20%, rgba(207, 209, 222, 0) 40%, rgba(207, 209, 222, 0) 100%);
 }
 .thumbnail:hover{
   background-color: rgba(197, 181, 181, 0.847);
@@ -1124,6 +1137,9 @@ a, p, h1, figcaption, em, li{
 }
 .thumbnail:hover p{
   overflow: visible;
+}
+.thumbnail:hover p::before{
+  display: none;
 }
 #UserIpicturesIMyArt{
   display: block;
@@ -1308,6 +1324,9 @@ a, p, h1, figcaption, em, li{
   }
   #P3a{
     font-size: 3vw;
+  }
+  .P11{
+    font-size: 1.6vw;
   }
   #IV_Frame{
     min-width: 38dvh;
