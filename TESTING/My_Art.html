@@ -1142,6 +1142,7 @@
   Switch.addEventListener('click', Wait4Boot);
   const thewholething = document.documentElement;
   function Wait4Boot(){
+    Switch.style.cursor = "auto";
     Switch.removeEventListener('click', Wait4Boot);
     SwitchP.forEach(p => {p.style.visibility = "hidden";});
     if (thewholething.requestFullscreen) {
@@ -1155,7 +1156,6 @@
     function startBootUp() {
       BootUp.removeEventListener("canplaythrough", startBootUp);
       BootUp.play().catch(err => console.warn("Autoplay prevented:", err));
-      Switch.style.cursor = "auto";
       SgA.style.backgroundColor = "rgb(20,20,20)";
       SgACurtain.style.backgroundColor = "rgb(20,20,20)";
       setTimeout(() => {
