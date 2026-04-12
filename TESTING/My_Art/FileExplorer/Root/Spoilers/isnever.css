@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'VA-11 Hall-A 6px Non-mono';
+    src: url("../../../../font/va-11-hall-a-6px-non-mono.ttf") format('truetype'),
+        url("../../../../font/VA-11Hall-A6pxNon-mono.woff2") format('woff2'),
+        url("../../../../font/VA-11Hall-A6pxNon-mono.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+  width: 100dvw;
+  height: 100dvh;
+  background: #1D1D1D;
+  overflow: hidden;
+}
+.bouncingtext{
+  position: absolute;
+  will-change: transform;
+  height: 10dvh;
+}
+.enter img{
+  position: absolute;
+  height: 3dvh;
+  left: 50%;
+  top: calc(50dvh + 4vh);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.enter img:hover{
+  opacity: 0.8;
+}
+
+input{
+  position: absolute;
+  height: 2dvh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  font-family: 'VA-11 Hall-A 6px Non-mono';
+
+  border: groove;
+  border-width: 0.3rem;
+}

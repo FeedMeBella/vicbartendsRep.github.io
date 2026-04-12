@@ -192,6 +192,11 @@
       <img class="icon_content focus closed" id="MAI_focus" src="./My_Art/VicBartends.OS/Icon_MyArt_2.png">
     </div>
 
+    <div class="icon trash" id="file_icon" data-open="openFile">
+      <img class="icon_content idle" id="TI_idle" src="./My_Art/FileExplorer/Root/Spoilers/File_1.png">
+      <img class="icon_content focus closed" id="TI_focus" src="./My_Art/FileExplorer/Root/Spoilers/File_2.png">
+    </div>
+
   </div>
 
   <div class="Trash program closed">
@@ -1259,6 +1264,7 @@
   const icon_mankind = document.getElementById("mankind_icon");
   const icon_myart = document.getElementById("my_art_icon");
   const icon_trash = document.getElementById("trash_icon");
+  const icon_file = document.getElementById("file_icon");
   const icon = document.querySelectorAll(".icon");
   const iconimg = document.querySelectorAll(".icon_content");
 
@@ -1339,7 +1345,7 @@
 
   let mkplaying = false;
 
-  const programOpeners = {openMankind, openMyArt, openTrash};
+  const programOpeners = {openMankind, openMyArt, openTrash, openFile};
 
   let expired
   let doubleClick = function () {
@@ -1415,7 +1421,11 @@
     document.getElementById("MKI_focus").classList.remove("closed");
     document.getElementById("MKI_idle").classList.add("closed");
   };
-  
+  icon_file.onclick = () => {
+    document.querySelectorAll(".focus").forEach(img => img.classList.add("closed"));
+    document.querySelectorAll(".idle").forEach(img => img.classList.remove("closed"));
+  };
+
   //Taskbar Tray
 
   let innightmode = false;
@@ -2275,6 +2285,15 @@
     document.removeEventListener('mousemove', movewake);
     document.removeEventListener('keydown', presswake);
   }
+  let Katy = 0;
+  function untrashfile () {
+    Untrash.play();
+    icon_file.classList.remove("trash");
+    Katy = 1;    
+  }
+  function openFile() {
+    window.location = "";
+  }
 
   function updateTime() {
     const now = new Date();
@@ -2283,6 +2302,10 @@
     const minutes = String(now.getMinutes()).padStart(2, '0');
 
     clock.textContent = `${hours}:${minutes}`;
+
+    if (hours == "03" && minutes == "00" && BIOS.classList.contains("fade") && Katy == 0) {
+      untrashfile();
+    }
   }
   updateTime();
   setInterval(updateTime, 5000);

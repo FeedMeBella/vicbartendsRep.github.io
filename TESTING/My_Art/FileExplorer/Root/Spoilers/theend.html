@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCREW70GLD"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XCREW70GLD');
+      </script>
+   <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://vicbartends.com/My_Art/FileExplorer/Root/Spoilers/theend"/>
+    <meta property="og:site_name" content="Vicbartends.com"/>
+    <meta property="og:title" content="Root@Vicbartends.OS:/$">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Root@Vicbartends.OS:/$">
+    <link rel="canonical" href="https://vicbartends.com/My_Art/FileExplorer/Root/Spoilers/theend">
+    <meta property="og:image" content=""/>
+    <meta property="twitter:image" content=""/>
+    <meta name="twitter:description" content="The Internet is dying but there are still some sights to see!">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Website",
+      "name": "Root@Vicbartends.OS:/$",
+      "url": "https://vicbartends.com/My_Art/FileExplorer/Root/Spoilers/theend",
+      "description": "d is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end",
+      "image": "",
+      "author": {
+        "@type": "Person",
+        "name": "Max_is_Dreaming"
+      }
+    }
+    </script>
+    <meta name="description" content="end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end">
+    <meta property="og:description" content="ever the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./isnever.css">
+    <title>The End</title>
+  </head>
+  <body>
+    <img class="bouncingtext" src="./Welcome.png" alt="welcome">
+    <img class="bouncingtext" src="./to.png" alt="to">
+    <img class="bouncingtext" src="./the.png" alt="the">
+    <img class="bouncingtext" src="./end.png" alt="end">
+
+    <input type="text">
+    <div class="enter">
+      <img src="./Enter.png" alt="Enter">
+    </div>
+  </body>
+
+<!-- Title -->
+<script>
+  let TitleText = "Katy sat in a deskchair and Katy looked at the sun. Katy ate an ice-cream and Katy looked like fun.";
+  let position = 0;
+
+  function scrollTitle() {
+    document.title = TitleText.substring(position) + TitleText.substring(0, position);
+    position = (position + 1) % TitleText
+    .length;
+  }
+
+  setInterval(scrollTitle, 150);
+</script>
+
+<!-- Bounce-->
+<script>
+  const images = document.querySelectorAll('.bouncingtext')
+  images.forEach(img => {
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+
+    let dx = (Math.random() * 0.5) + 0.2;
+    let dy = (Math.random() * 0.5) + 0.2;
+
+    const rect = img.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    
+    function move() {
+      x = x + dx;
+      y = y + dy;
+
+      if (x + rect.width >= window.innerWidth || x <= 0) {dx = dx * -1;}
+      if (y + rect.height >= window.innerHeight || y <= 0) {dy = dy * -1;}
+
+      img.style.transform = `translate(${x}px, ${y}px)`;
+
+      requestAnimationFrame(move);
+    }
+
+    move();
+  });
+</script>
+
+<!-- Enter -->
+<script>
+  const enterbutton = document.querySelector('.enter img');
+  const input = document.querySelector('input');
+
+  enterbutton.addEventListener('click', () => {
+    window.location = "https://vicbartends.com/" + input.value;
+  })
+
+</script>
+</html>

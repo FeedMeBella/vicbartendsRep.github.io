@@ -447,8 +447,8 @@ a, p, h1, figcaption, em, li{
   height: 80dvh;
   width: 80vw;
   display: grid;
-  grid-template-columns: 10dvh 10dvh 10dvh;
-  grid-template-rows: 12dvh 12dvh 12dvh;
+  grid-template-columns: 10dvh 10dvh 10dvh 10dvh 10dvh 10dvh;
+  grid-template-rows: 12dvh 12dvh 12dvh 12dvh 12dvh 12dvh;
   grid-gap: 0.5%;
 }
 .icon:hover{
@@ -482,6 +482,10 @@ a, p, h1, figcaption, em, li{
 #mankind_icon{
   grid-column: 3;
   grid-row: 1;
+}
+#file_icon{
+  grid-column: 4;
+  grid-row: 6;
 }
 .blue-background{
   background-color: aquamarine;
