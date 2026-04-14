@@ -586,6 +586,15 @@ a, p, h1, figcaption, em, li{
   filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
   cursor: help;
 }
+#png2{
+  position: absolute;
+  width: auto;
+  height: 10%;
+  bottom: 40%;
+  left: 13dvh;
+  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
+  cursor: help;
+}
 
 /* Program */
 .hide{
@@ -1374,6 +1383,12 @@ a, p, h1, figcaption, em, li{
     bottom: 32dvw;
     left: 37%;
   }
+  #png2{
+    width: 13%;
+    height: auto;
+    bottom: 31dvw;
+    left: 22%;
+  }
   .tbicons{
     left: 22dvh;
   }
@@ -1457,6 +1472,9 @@ a, p, h1, figcaption, em, li{
   }
   #png1{
     bottom: 47dvw;
+  }
+  #png2{
+    bottom: 46dvw;
   }
   .sitenews{
     width: 70dvw;
