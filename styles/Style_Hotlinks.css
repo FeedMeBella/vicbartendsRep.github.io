@@ -169,6 +169,14 @@ h3{
   text-shadow: 2px 2px 4px #efb2b2;
 }
 
+#DYKENET{
+  position: relative;
+  list-style: none;
+  width: 100vw;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-20%);
+}
 /* Tablet Mode */
 @media (max-aspect-ratio: 1) {
   .back2index{
