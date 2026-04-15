@@ -8,9 +8,7 @@
 }
 @font-face {
     font-family: 'typewriter';
-    src: url("../font/rm_typerighter_old.woff2") format("woff2"),
-         url("../font/rm_typerighter_old.woff") format("woff"),
-         url("../font/rm_typerighter_old.otf") format("opentype"),
+    src: url("../font/rm_typerighter_old.otf") format("opentype"),
          url("../font/rm_typerighter_old.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
