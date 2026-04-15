@@ -589,7 +589,16 @@ a, p, h1, figcaption, em, li{
   width: auto;
   height: 10%;
   bottom: 40%;
-  left: 13dvh;
+  left: 12dvh;
+  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
+  cursor: help;
+}
+#png3{
+  position: absolute;
+  width: auto;
+  height: 10%;
+  bottom: 40%;
+  left: 5dvh;
   filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
   cursor: help;
 }
@@ -1385,7 +1394,13 @@ a, p, h1, figcaption, em, li{
     width: 13%;
     height: auto;
     bottom: 31dvw;
-    left: 22%;
+    left: 21%;
+  }
+  #png3{
+    width: 9%;
+    height: auto;
+    bottom: 31dvw;
+    left: 8%;
   }
   .tbicons{
     left: 22dvh;
@@ -1472,6 +1487,9 @@ a, p, h1, figcaption, em, li{
     bottom: 47dvw;
   }
   #png2{
+    bottom: 46dvw;
+  }
+  #png3{
     bottom: 46dvw;
   }
   .sitenews{
