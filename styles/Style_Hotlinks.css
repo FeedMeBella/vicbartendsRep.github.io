@@ -175,7 +175,10 @@ h3{
   width: 100vw;
   top: 15%;
   left: 50%;
-  transform: translateX(-20%);
+  transform: translateX(-50%);
+}
+#DYKENET:hover{
+  -webkit-filter: drop-shadow(rgb(255, 232, 232) 1px 0px 1px);
 }
 /* Tablet Mode */
 @media (max-aspect-ratio: 1) {
