@@ -731,6 +731,7 @@
 
 <!-- Intro Animation -->
 <script>
+  const thewholething = document.documentElement;
   const SgA = document.querySelector(".BlackHole");
   const SgACurtain = document.querySelector(".BlackHoleCurtain");
   const SgAtext = document.getElementById("blackhole");
@@ -1186,7 +1187,6 @@
 
   function Start(Type) {
     Switch.addEventListener('click', Wait4Boot);
-    const thewholething = document.documentElement;
     function Wait4Boot(){
       Switch.style.cursor = "auto";
       Switch.removeEventListener('click', Wait4Boot);
