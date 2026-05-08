@@ -161,7 +161,6 @@ a, p, h1, h3, figcaption, em, li{
 }
 h3{
   position: relative;
-  list-style: none;
   width: 100vw;
   top: 15%;
   text-align: center;
@@ -171,15 +170,22 @@ h3{
 
 #DYKENET{
   position: relative;
-  list-style: none;
   width: 100vw;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
 }
-#DYKENET:hover{
+#DYKENET:hover, #OffPlatform:hover{
   filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
   -webkit-filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
+}
+
+#OffPlatform{
+  position: relative;
+  width: 100vw;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* Tablet Mode */
 @media (max-aspect-ratio: 1) {
