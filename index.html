@@ -237,267 +237,6 @@
   window.addEventListener("resize", isTablet);
 </script>
 
-<!-- Start Logic -->
-<script>
-const text1 = "This is a loading screen";
-const text2 = "...";
-const text3 = "Wow, your internet is really slow...";
-const target = document.querySelector("#loading pre");
-const typeSound = document.getElementById("type-sound");
-
-
-let i1 = 0, i2 = 0, i3 = 0;
-let loadingFinished = false;
-let stopTyping = false;
-let canPressSpace = true;
-let bubbleTimeout;
-let bubbleHasAppeared = false;
-
-const loadingtext = document.getElementById("loadingtext");
-const VicSelected = document.getElementById("VicSelect");
-const LyriaSelected = document.getElementById("LyriaSelect");
-const PercivalSelected = document.getElementById("PercivalSelect");
-const BartenderSelect = document.querySelector(".Bartenderselect");
-let selectedbartender = "Vic";
-const BSsound1 = document.getElementById("BSS1");
-const BSsound2 = document.getElementById("BSS2");
-
-function playTypeSound() {
-  if (loadingFinished) return;
-  typeSound.currentTime = 0;
-  typeSound.play();
-}
-
-function paragraph() {
-  target.textContent += "\n";
-}
-
-function typeText1() {
-  if (stopTyping) return;
-  if (i1 < text1.length) {
-    target.textContent += text1.charAt(i1);
-    playTypeSound();
-    i1++;
-    setTimeout(typeText1, 130);
-  } else {
-    setTimeout(paragraph, 1000);
-    setTimeout(typeText2, 2000);
-  }
-}
-
-function typeText2() {
-  if (stopTyping) return;
-  if (i2 < text2.length) {
-    target.textContent += text2.charAt(i2);
-    playTypeSound();
-    i2++;
-    setTimeout(typeText2, 400);
-  } else {
-    setTimeout(paragraph, 3000);
-    setTimeout(typeText3, 4000);
-  }
-}
-
-function typeText3() {
-  if (stopTyping) return;
-  if (i3 < text3.length) {
-    target.textContent += text3.charAt(i3);
-    playTypeSound();
-    i3++;
-    setTimeout(typeText3, 100);
-  }
-}
-
-function onLoadingComplete() {
-  stopTyping = true;
-  loadingFinished = true;
-
-  const completeLine = document.createElement('span');
-  completeLine.textContent = "\nloading complete, press any key to enter";
-  completeLine.style.color = 'lightgreen';
-  completeLine.style.cursor = 'default';
-  completeLine.style.userSelect = 'none';
-
-  target.appendChild(completeLine);
-
-  const loader = document.getElementById("loading");
-  const BGmusic = document.getElementById("donaranha");
-
-
- function proceed() {
-    console.info(selectedbartender + " selected!");
-    StartBartender(); //this makes it sound like they're programs lol.
-    showRandomAd(); 
-    setTimeout(() => {loader.style.opacity = "0"}, 100);
-    setTimeout(() => {loader.remove(); startMenuLogic();}, 600);
-
-    window.skipNextBlur = false;
-
-    BGmusic.play().catch(err => {console.warn("Autoplay prevented:", err);});
-
-    bubbleTimeout = setTimeout(() => {
-        bubbleText.textContent = getRandomMessage("");
-        textBubble.style.display = "block"                   
-        textBubble.classList.add('animate__animated', 'animate__jackInTheBox');
-        textBubble.style.setProperty('--animate-duration', '2s');
-        setTimeout(() => {bubbleHasAppeared = true;}, 500); 
-    }, 3000);
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        BGmusic.pause();
-      } else if (loadingFinished && BGmusic.paused) {
-        BGmusic.play();
-      }
-    });
-    
-  }
-
-  function bartenderselect() {
-    
-    // Cleanup previous listeners
-    document.removeEventListener('keydown', keyListener);
-    loader.removeEventListener('click', clickListener);
-
-    loadingtext.style.opacity = "0";
-    BSsound1.play().catch(err => {console.warn("Autoplay prevented:", err);});
-    BartenderSelect.style.display = "flex";
-    setTimeout(() => {BartenderSelect.style.opacity = "1";}, 200);
-
-    setTimeout(() => {
-      VicSelected.addEventListener('click', () => {
-        BSsound2.play().catch(err => {console.warn("Autoplay prevented:", err);});
-        selectedbartender = "Vic";
-        proceed();
-      });
-
-      LyriaSelected.addEventListener('click', () => {
-        BSsound2.play().catch(err => {console.warn("Autoplay prevented:", err);});
-        selectedbartender = "Lyria";
-        proceed();
-      });
-
-      PercivalSelected.addEventListener('click', () => {
-      BSsound2.play().catch(err => {console.warn("Autoplay prevented:", err);});
-      selectedbartender = "Percival";
-      proceed();
-    });
-    }, 500);
-  }
-
-  function keyListener() {
-    bartenderselect();
-  }
-
-  function clickListener() {
-    bartenderselect();
-  }
-
-  document.addEventListener('keydown', keyListener);
-  loader.addEventListener('click', clickListener);
-}
-
-typeText1();
-
-window.addEventListener("load", () => {
-  onLoadingComplete();
-});
-
-function startMenuLogic() {
-  const button = document.getElementById('space-bar'); 
-  const snooze = document.getElementById('snooze'); 
-  const menu = document.getElementById('menu');
-  const textBubble = document.getElementById('textBubble');
-  const bubbleText = document.getElementById('bubbleText');
-  const bartenders = document.querySelectorAll('.bartender');
-  
-
-  function hideTextBubble() {
-  if (!bubbleHasAppeared) return;
-  setTimeout(() => {textBubble.style.display = "none";}, 1000);
-  textBubble.classList.remove('animate__jackInTheBox', 'animate__animated');
-  textBubble.classList.add('animate__animated', 'animate__fadeOut');
-  textBubble.style.setProperty('--animate-duration', '1s');
-}
-
-  function showTextBubble() {
-    setTimeout(() => {
-      textBubble.classList.remove('animate__animated', 'animate__fadeOut');
-      void textBubble.offsetWidth;
-      textBubble.style.display = "block";    
-      bubbleText.textContent = getRandomMessage(bubbleText.textContent);
-      textBubble.classList.add('animate__animated', 'animate__jackInTheBox');
-      textBubble.style.setProperty('--animate-duration', '2s');
-    }, 300);
-  }
-
-  function activateMenu() {
-    if (bubbleTimeout) {clearTimeout(bubbleTimeout); bubbleHasAppeared = true;}
-    menu.classList.remove('move-down');
-    menu.classList.add('move-up');
-    // button.style.pointerEvents = "none"; Delete me if works
-    button.classList.add('hide');
-    hideTextBubble();
-  }
-
-  function deactivateMenu() {
-    menu.classList.remove('move-up');
-    menu.classList.add('move-down');
-    // button.style.pointerEvents = "all"; Delete me if it works
-    if (textBubble.style.display !== "block") {showTextBubble();}
-    setTimeout(() => {button.classList.remove('hide');}, 700);
-  }
-
-  bartenders.forEach(bartender => bartender.addEventListener('click', () => {
-    if (!bubbleHasAppeared) {return}
-    hideTextBubble();
-    setTimeout(() => {showTextBubble();}, 1000);
-  }));
-  textBubble.addEventListener('click', hideTextBubble); //Why don't you work??? YOU DO!!! THERE WAS A MISTAKE WITH THE CSS I AM A GENIUS AFTER ALL!!!
-  
-  // setTimeout(() => {
-  //   if (!menu.classList.contains('move-up') && !menu.classList.contains('move-down')) {
-  //     activateMenu();
-  //   }
-  // }, 10000);
-  // Before the phone would go up after a bit, but I think that after the orbital buttons, there's already a lot happening on the index.
-
-  button.addEventListener('click', activateMenu);
-  snooze.addEventListener('click', () => {
-    if (chatclosed) {
-      deactivateMenu();
-    }
-    else {
-      phoneicons.classList.remove('closed');
-      chatroom.classList.add('closed');
-      vicbartendschat.classList.add('closed');
-      chatclosed = true
-    }
-  });
-
-
-  document.addEventListener('keydown', (event) => {
-  if (event.code === 'Space') {
-    event.preventDefault();
-
-    if (!canPressSpace) return;
-
-    canPressSpace = false; 
-    setTimeout(() => {
-      canPressSpace = true; 
-    }, 1000); 
-
-    if (menu.classList.contains('move-up')) {
-      deactivateMenu();
-    } else {
-      activateMenu();
-    }
-  }
- });
- 
-}
-</script>
-
 <!-- Bartenders -->
 <script>
   const messagesVic = [
@@ -830,6 +569,286 @@ function startMenuLogic() {
     vicbartendschat.classList.remove('closed');
     chatclosed = false
   });
+</script>
+
+<!-- Start Logic -->
+<script>
+const text1 = "This is a loading screen";
+const text2 = "...";
+const text3 = "Wow, your internet is really slow...";
+const target = document.querySelector("#loading pre");
+const typeSound = document.getElementById("type-sound");
+
+let i1 = 0, i2 = 0, i3 = 0;
+let loadingFinished = false;
+let stopTyping = false;
+let canPressSpace = true;
+let bubbleTimeout;
+let bubbleHasAppeared = false;
+
+const loadingtext = document.getElementById("loadingtext");
+const VicSelected = document.getElementById("VicSelect");
+const LyriaSelected = document.getElementById("LyriaSelect");
+const PercivalSelected = document.getElementById("PercivalSelect");
+const BartenderSelect = document.querySelector(".Bartenderselect");
+let selectedbartender = sessionStorage.getItem('bartender');
+const BSsound1 = document.getElementById("BSS1");
+const BSsound2 = document.getElementById("BSS2");
+
+function playTypeSound() {
+  if (loadingFinished) return;
+  typeSound.currentTime = 0;
+  typeSound.play();
+}
+
+function paragraph() {
+  target.textContent += "\n";
+}
+
+function typeText1() {
+  if (stopTyping) return;
+  if (i1 < text1.length) {
+    target.textContent += text1.charAt(i1);
+    playTypeSound();
+    i1++;
+    setTimeout(typeText1, 130);
+  } else {
+    setTimeout(paragraph, 1000);
+    setTimeout(typeText2, 2000);
+  }
+}
+
+function typeText2() {
+  if (stopTyping) return;
+  if (i2 < text2.length) {
+    target.textContent += text2.charAt(i2);
+    playTypeSound();
+    i2++;
+    setTimeout(typeText2, 400);
+  } else {
+    setTimeout(paragraph, 3000);
+    setTimeout(typeText3, 4000);
+  }
+}
+
+function typeText3() {
+  if (stopTyping) return;
+  if (i3 < text3.length) {
+    target.textContent += text3.charAt(i3);
+    playTypeSound();
+    i3++;
+    setTimeout(typeText3, 100);
+  }
+}
+
+function onLoadingComplete() {
+  stopTyping = true;
+  loadingFinished = true;
+
+  const completeLine = document.createElement('span');
+  completeLine.textContent = "\nloading complete, press any key to enter";
+  completeLine.style.color = 'lightgreen';
+  completeLine.style.cursor = 'default';
+  completeLine.style.userSelect = 'none';
+
+  target.appendChild(completeLine);
+
+  function bartenderselect() {
+    
+    // Cleanup previous listeners
+    document.removeEventListener('keydown', keyListener);
+    loader.removeEventListener('click', clickListener);
+    loadingtext.style.opacity = "0";
+    BSsound1.play().catch(err => {console.warn("Autoplay prevented:", err);});
+    BartenderSelect.style.display = "flex";
+    setTimeout(() => {BartenderSelect.style.opacity = "1";}, 200);
+
+    setTimeout(() => {
+      VicSelected.addEventListener('click', () => {
+        BSsound2.play().catch(err => {console.warn("Autoplay prevented:", err);});
+        sessionStorage.setItem('bartender', "Vic");
+        selectedbartender = "Vic";
+        proceed();
+      });
+
+      LyriaSelected.addEventListener('click', () => {
+        BSsound2.play().catch(err => {console.warn("Autoplay prevented:", err);});
+        selectedbartender = "Lyria";
+        sessionStorage.setItem('bartender', "Lyria");
+        proceed();
+      });
+
+      PercivalSelected.addEventListener('click', () => {
+        BSsound2.play().catch(err => {console.warn("Autoplay prevented:", err);});
+        selectedbartender = "Percival";
+        sessionStorage.setItem('bartender', "Percival");
+        proceed();
+      });
+    }, 500);
+  }
+
+  function keyListener() {
+    bartenderselect();
+  }
+
+  function clickListener() {
+    bartenderselect();
+  }
+
+  document.addEventListener('keydown', keyListener);
+  loader.addEventListener('click', clickListener);
+}
+
+  const loader = document.getElementById("loading");
+  const BGmusic = document.getElementById("donaranha");
+
+  function proceed() {
+    console.info(selectedbartender + " selected!");
+    StartBartender(); //this makes it sound like they're programs lol.
+    showRandomAd(); 
+    setTimeout(() => {loader.style.opacity = "0"}, 200);
+    setTimeout(() => {loader.remove(); startMenuLogic();}, 600);
+
+    window.skipNextBlur = false;
+
+    BGmusic.play().catch(err => {console.warn("Autoplay prevented:", err);});
+
+    bubbleTimeout = setTimeout(() => {
+        bubbleText.textContent = getRandomMessage("");
+        textBubble.style.display = "block"                   
+        textBubble.classList.add('animate__animated', 'animate__jackInTheBox');
+        textBubble.style.setProperty('--animate-duration', '2s');
+        setTimeout(() => {bubbleHasAppeared = true;}, 500); 
+    }, 3000);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        BGmusic.pause();
+      } else if (loadingFinished && BGmusic.paused) {
+        BGmusic.play();
+      }
+    });
+    
+  }
+
+  var isCached = performance.getEntriesByType("navigation")[0].transferSize === 0;
+  
+  console.info(performance.navigation.type);
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD){
+    console.info( "This page is reloaded and the bartender is " + selectedbartender + "and the isCashedValue is " + isCached);
+    sessionStorage.removeItem('bartender');
+    typeText1();
+    window.addEventListener("load", () => {onLoadingComplete();});
+  }
+  else {
+    console.info( "This page is NOT reloaded and the bartender is " + selectedbartender +  "and the isCashedValue is " + isCached);
+    if (isCached && selectedbartender !== null) {
+      stopTyping = true;
+      loadingFinished = true;
+      loader.style.transition = "opacity 0.1s ease-in-out;";
+      proceed();
+    }
+    else{
+      sessionStorage.removeItem('bartender');
+      typeText1();
+      window.addEventListener("load", () => {onLoadingComplete();});
+    }
+  }
+
+
+function startMenuLogic() {
+  const button = document.getElementById('space-bar'); 
+  const snooze = document.getElementById('snooze'); 
+  const menu = document.getElementById('menu');
+  const textBubble = document.getElementById('textBubble');
+  const bubbleText = document.getElementById('bubbleText');
+  const bartenders = document.querySelectorAll('.bartender');
+  
+
+  function hideTextBubble() {
+  if (!bubbleHasAppeared) return;
+  setTimeout(() => {textBubble.style.display = "none";}, 1000);
+  textBubble.classList.remove('animate__jackInTheBox', 'animate__animated');
+  textBubble.classList.add('animate__animated', 'animate__fadeOut');
+  textBubble.style.setProperty('--animate-duration', '1s');
+}
+
+  function showTextBubble() {
+    setTimeout(() => {
+      textBubble.classList.remove('animate__animated', 'animate__fadeOut');
+      void textBubble.offsetWidth;
+      textBubble.style.display = "block";    
+      bubbleText.textContent = getRandomMessage(bubbleText.textContent);
+      textBubble.classList.add('animate__animated', 'animate__jackInTheBox');
+      textBubble.style.setProperty('--animate-duration', '2s');
+    }, 300);
+  }
+
+  function activateMenu() {
+    if (bubbleTimeout) {clearTimeout(bubbleTimeout); bubbleHasAppeared = true;}
+    menu.classList.remove('move-down');
+    menu.classList.add('move-up');
+    // button.style.pointerEvents = "none"; Delete me if works
+    button.classList.add('hide');
+    hideTextBubble();
+  }
+
+  function deactivateMenu() {
+    menu.classList.remove('move-up');
+    menu.classList.add('move-down');
+    // button.style.pointerEvents = "all"; Delete me if it works
+    if (textBubble.style.display !== "block") {showTextBubble();}
+    setTimeout(() => {button.classList.remove('hide');}, 700);
+  }
+
+  bartenders.forEach(bartender => bartender.addEventListener('click', () => {
+    if (!bubbleHasAppeared) {return}
+    hideTextBubble();
+    setTimeout(() => {showTextBubble();}, 1000);
+  }));
+  textBubble.addEventListener('click', hideTextBubble); //Why don't you work??? YOU DO!!! THERE WAS A MISTAKE WITH THE CSS I AM A GENIUS AFTER ALL!!!
+  
+  // setTimeout(() => {
+  //   if (!menu.classList.contains('move-up') && !menu.classList.contains('move-down')) {
+  //     activateMenu();
+  //   }
+  // }, 10000);
+  // Before the phone would go up after a bit, but I think that after the orbital buttons, there's already a lot happening on the index.
+
+  button.addEventListener('click', activateMenu);
+  snooze.addEventListener('click', () => {
+    if (chatclosed) {
+      deactivateMenu();
+    }
+    else {
+      phoneicons.classList.remove('closed');
+      chatroom.classList.add('closed');
+      vicbartendschat.classList.add('closed');
+      chatclosed = true
+    }
+  });
+
+
+  document.addEventListener('keydown', (event) => {
+  if (event.code === 'Space') {
+    event.preventDefault();
+
+    if (!canPressSpace) return;
+
+    canPressSpace = false; 
+    setTimeout(() => {
+      canPressSpace = true; 
+    }, 1000); 
+
+    if (menu.classList.contains('move-up')) {
+      deactivateMenu();
+    } else {
+      activateMenu();
+    }
+  }
+ });
+ 
+}
 </script>
 
 </html>

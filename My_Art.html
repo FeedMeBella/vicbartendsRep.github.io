@@ -882,8 +882,8 @@
     pageLoaded = true;
   });
 
-  function End(){
-    speed = 1;
+  function End(maybequick){
+    speed = maybequick;
     setTimeout(() => {BIOS.scroll({ top: 200, behavior: "instant",});}, speed * 200);
     setTimeout(() => {BIOS.scroll({ top: 300, behavior: "instant",});}, speed * 400);
     setTimeout(() => {BIOS.scroll({ top: 400, behavior: "instant",});}, speed * 600);
@@ -913,6 +913,7 @@
       fadeOutAudio(BootUp, 1000);
       fadeOutAudio(BootUpLoop, 1000);
       finishedBoot = true;
+      sessionStorage.setItem('WatchedBoot', 'true');
     }, speed * 4500);
   }
 
@@ -956,7 +957,7 @@
       else {
         updateProgressBar(1);
         P12.classList.remove("closed");
-        setTimeout(() => { End(); }, speed * 2500);
+        setTimeout(() => { End(1); }, speed * 2500);
       }
     }
   }
@@ -1146,45 +1147,85 @@
   const EnterSound = document.getElementById("EnterSound");
   const woowee = document.getElementById("woowee");
 
-  Switch.addEventListener('click', Wait4Boot);
-  const thewholething = document.documentElement;
-  function Wait4Boot(){
-    Switch.style.cursor = "auto";
-    Switch.removeEventListener('click', Wait4Boot);
-    SwitchP.forEach(p => {p.style.visibility = "hidden";});
-    if (thewholething.requestFullscreen) {
-      thewholething.requestFullscreen();
-    } else if (thewholething.webkitRequestFullscreen) { 
-      thewholething.webkitRequestFullscreen();
-    } else if (thewholething.msRequestFullscreen) {
-      thewholething.msRequestFullscreen();
-    }
+  if (sessionStorage.getItem('WatchedBoot')){
+    fadeOutAudio(BootUp, 1000);
+    fadeOutAudio(BootUpLoop, 1000);
+    finishedBoot = true;
+    setTimeout(() => {
+      tabtext.style.color = "white";
+      tab.classList.remove("closed");
+    }, speed * 1200);
+    setTimeout(() => {
+      tab.classList.add("closed");
+    }, speed * 1400);
+    setTimeout(() => {
+      tab.classList.remove("closed");
+      tabtext.style.color = "rgba(0, 87, 175)";
+    }, speed * 1900);
+    setTimeout(() => {
+      tab.classList.add("closed");
+    }, speed * 1970);
+    setTimeout(() => {
+      tab.classList.remove("closed");
+      tabtext.style.color = "white";
+    }, speed * 2200);
+    setTimeout(() => {
+      tabtext.style.color = "rgba(0, 87, 175)";
+    }, speed * 2300);
+    setTimeout(() => {
+      tab.classList.add("closed");
+    }, speed * 2330);
+    setTimeout(() => {
+      tab.classList.remove("closed");
+    }, speed * 2350);
+    Start("quick");
+  }
+  else{
+    Start("normal");
+  }
 
-    function startBootUp() {
-      BootUp.removeEventListener("canplaythrough", startBootUp);
-      BootUp.play().catch(err => console.warn("Autoplay prevented:", err));
-      SgA.style.backgroundColor = "rgb(20,20,20)";
-      SgACurtain.style.backgroundColor = "rgb(20,20,20)";
-      setTimeout(() => {
-        Switch.classList.add("closed");
-        SgA.classList.add("closed");
-        InterloperStart();
-      }, 930);
-      BootUp.addEventListener("ended", () => {
-        BootUpLoop.loop = true;
-        BootUpLoop.play().catch(err => console.warn("Autoplay prevented:", err));
-      });
-    };
+  function Start(Type) {
+    Switch.addEventListener('click', Wait4Boot);
+    const thewholething = document.documentElement;
+    function Wait4Boot(){
+      Switch.style.cursor = "auto";
+      Switch.removeEventListener('click', Wait4Boot);
+      SwitchP.forEach(p => {p.style.visibility = "hidden";});
+      if (thewholething.requestFullscreen) {
+        thewholething.requestFullscreen();
+      } else if (thewholething.webkitRequestFullscreen) { 
+        thewholething.webkitRequestFullscreen();
+      } else if (thewholething.msRequestFullscreen) {
+        thewholething.msRequestFullscreen();
+      }
 
-    const fontReady = document.fonts.load('16px "amiga-topaz"');
-    if (BootUp.readyState >= 3) {
-      fontReady.then(startBootUp);
-    } else {
-      BootUp.addEventListener("canplaythrough", () => {
+      function startBootUp() {
+        BootUp.removeEventListener("canplaythrough", startBootUp);
+        BootUp.play().catch(err => console.warn("Autoplay prevented:", err));
+        SgA.style.backgroundColor = "rgb(20,20,20)";
+        SgACurtain.style.backgroundColor = "rgb(20,20,20)";
+        setTimeout(() => {
+          Switch.classList.add("closed");
+          SgA.classList.add("closed");
+          if (Type == "normal"){InterloperStart();}
+          if (Type == "quick"){End(0.5);}
+        }, 930);
+        BootUp.addEventListener("ended", () => {
+          BootUpLoop.loop = true;
+          BootUpLoop.play().catch(err => console.warn("Autoplay prevented:", err));
+        });
+      };
+
+      const fontReady = document.fonts.load('16px "amiga-topaz"');
+      if (BootUp.readyState >= 3) {
         fontReady.then(startBootUp);
-      }, { once: true });
-    }
-  }; 
+      } else {
+        BootUp.addEventListener("canplaythrough", () => {
+          fontReady.then(startBootUp);
+        }, { once: true });
+      }
+    }; 
+  }
 
   function fadeOutAudio(audio, duration = 2000) {
     const stepTime = 50; // ms per step
@@ -2236,6 +2277,7 @@
     }
   });
   document.getElementById('reboot').addEventListener('click', () => {
+    sessionStorage.removeItem('WatchedBoot');
     setTimeout(() => {homemenu.classList.add('closed');}, 200);
     setTimeout(() => {taskbar.classList.add('closed');}, 730);
     setTimeout(() => {icon_trash.classList.add('closed');}, 850);
