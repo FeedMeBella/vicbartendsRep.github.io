@@ -128,7 +128,7 @@ a, p, h1, h3, figcaption, em, li{
 .Hottitle{
   position: relative;
   width: 100vw;
-  top: 20%;
+  top: 15%;
   text-align: center;
   color: #49f9ff;
   text-shadow: 2px 2px 4px #ff0000;
@@ -138,7 +138,7 @@ a, p, h1, h3, figcaption, em, li{
   list-style: none;
   width: 100%;
   max-width: 150dvh;
-  top: 20%;
+  top: 15%;
   margin: 0 auto;
 }
 .Hotlist li {
@@ -162,7 +162,7 @@ a, p, h1, h3, figcaption, em, li{
 h3{
   position: relative;
   width: 100vw;
-  top: 23%;
+  top: 15%;
   text-align: center;
   color: #faeee0;
   text-shadow: 2px 2px 4px #efb2b2;
@@ -185,7 +185,7 @@ h3{
 #AOLW img{
   position: relative;
   width: auto;
-  top: 200%;
+  top: 120%;
   left: 50%;
   transform: translateX(-50%);
   filter: grayscale(1);
