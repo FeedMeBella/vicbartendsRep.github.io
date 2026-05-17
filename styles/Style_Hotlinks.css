@@ -133,6 +133,14 @@ a, p, h1, h3, figcaption, em, li{
   color: #49f9ff;
   text-shadow: 2px 2px 4px #ff0000;
 }
+#crackalacking{
+  color: #f79bff;
+  text-shadow: 2px 2px 4px #279100;
+}
+#neighbors{
+  color: #fff949;
+  text-shadow: 2px 2px 4px #8400ff;
+}
 .Hotlist {
   position: relative;
   list-style: none;
@@ -195,6 +203,36 @@ h3{
   -webkit-filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
 }
 
+.neighborscontainer{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  top: 15%;
+  text-align: center;
+  transition: 0.5s all;
+}
+.neighborbutton a{
+  filter: drop-shadow(rgb(255, 232, 232) 1px 0px 4px);
+  -webkit-filter: drop-shadow(rgb(255, 232, 232) 1px 0px 4px);
+}
+.neighborbutton a:hover{
+  filter: drop-shadow(rgb(0, 255, 195) 1px 0px 4px);
+  -webkit-filter: drop-shadow(rgb(0, 255, 195) 1px 0px 4px);
+}
+.neighborbutton a img:hover{
+  transform: rotateZ(5deg);
+}
+.neighborbutton p{
+  width: 30dvh;
+  font-size: 1.1rem;
+  color: rgb(255, 225, 0);
+  text-shadow: 2px 2px 4px #8a00b8;
+}
+.neighborbutton p:hover{
+  transform: rotateZ(-5deg);
+}
 
 /* Tablet Mode */
 @media (max-aspect-ratio: 1) {
