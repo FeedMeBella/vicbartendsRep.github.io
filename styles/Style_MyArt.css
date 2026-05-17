@@ -575,32 +575,36 @@ a, p, h1, figcaption, em, li{
 }
 
 /* Pngs */
-#png1{
+.png{
   position: absolute;
   width: auto;
+  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
+  cursor: help;
+}
+#png1{
   height: 10%;
   bottom: 40%;
   left: 22dvh;
-  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
-  cursor: help;
 }
 #png2{
-  position: absolute;
-  width: auto;
   height: 10%;
   bottom: 40%;
-  left: 12dvh;
-  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
-  cursor: help;
+  left: 13dvh;
 }
 #png3{
-  position: absolute;
-  width: auto;
   height: 10%;
   bottom: 40%;
   left: 5dvh;
-  filter: drop-shadow(0rem 0rem 0.5rem rgb(172, 152, 0));
-  cursor: help;
+}
+#png4{
+  height: 9%;
+  bottom: 52%;
+  left: 4dvh;
+}
+#png5{
+  height: 6%;
+  bottom: 53%;
+  left: 12.5dvh;
 }
 
 /* Program */
@@ -1402,6 +1406,18 @@ a, p, h1, figcaption, em, li{
     bottom: 31dvw;
     left: 8%;
   }
+  #png4{
+    width: 11%;
+    height: auto;
+    bottom: 41dvw;
+    left: 8%;
+  }
+  #png5{
+    width: 14%;
+    height: auto;
+    bottom: 41.5dvw;
+    left: 21%;
+  }
   .tbicons{
     left: 22dvh;
   }
@@ -1491,6 +1507,12 @@ a, p, h1, figcaption, em, li{
   }
   #png3{
     bottom: 46dvw;
+  }
+  #png4{
+    bottom: 60dvw;
+  }
+  #png5{
+    bottom: 61dvw;
   }
   .sitenews{
     width: 70dvw;

@@ -451,6 +451,13 @@ a, p, h1, figcaption, em, li{
   perspective: 100%;
   transform: rotateZ(5deg) rotateY(60deg);
 }
+.markusgraffiti{
+  position: absolute;
+  bottom: 9%;
+  right: 10dvh;
+  height: 11%;
+  transform: rotate(-25deg);
+}
 
 /* Space Bar Button */
 #space-bar {
@@ -706,6 +713,13 @@ a, p, h1, figcaption, em, li{
     right: 96%;
     height: 7dvw;
   }
+  .markusgraffiti{
+    bottom: 10%;
+    right: 10%;
+    height: 10dvw;
+  }
+
+
   #space-bar {
     left: 0px;
   }
