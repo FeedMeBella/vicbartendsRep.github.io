@@ -229,6 +229,7 @@ h3{
   font-size: 1.1rem;
   color: rgb(255, 225, 0);
   text-shadow: 2px 2px 4px #8a00b8;
+  cursor: default;
 }
 .neighborbutton p:hover{
   transform: rotateZ(-5deg);
@@ -296,6 +297,13 @@ h3{
   }
   .Hotlist {
     padding: 0;
+  }
+  .neighborscontainer{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .neighborbutton p{
+    width: 100dvw;
   }
 }
 
