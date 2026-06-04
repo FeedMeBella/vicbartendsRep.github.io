@@ -887,13 +887,13 @@ a, p, h1, figcaption, em, li{
 }
 @keyframes revolve {
   0% {
-    --angle: calc(var(--angle-start) + 210deg);
+    --angle: 210deg;
   }
   50% {
-    --angle: calc(var(--angle-start) + 30deg);
+    --angle: 30deg;
   }
   100% {
-    --angle: calc(var(--angle-start) - 150deg);
+    --angle: -150deg;
   }
 }
 .satellite{
@@ -926,10 +926,12 @@ a, p, h1, figcaption, em, li{
   top: 17%;
   left: 13dvh;
   width: 11.9dvh;
+  will-change: transform;
   --Xamplitude: 60dvh;
   --Yamplitude: 18dvh;
-  --x: calc(cos(var(--angle)) * var(--Xamplitude));
-  --y: calc(sin(var(--angle)) * var(--Yamplitude));
+  --firefox-angle: calc(var(--angle) + var(--angle-start));
+  --x: calc(cos(var(--firefox-angle)) * var(--Xamplitude));
+  --y: calc(sin(var(--firefox-angle)) * var(--Yamplitude));
   transform:rotate(var(--rotation)) translate(var(--x), var(--y)) rotate(calc(var(--rotation) * -1));
   animation: revolve 90s linear infinite;
 }
