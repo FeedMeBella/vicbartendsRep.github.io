@@ -196,7 +196,6 @@ h3{
   top: 120%;
   left: 50%;
   transform: translateX(-50%);
-  filter: grayscale(1);
 }
 #DYKENET:hover, #OffPlatform:hover{
   filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
