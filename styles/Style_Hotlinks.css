@@ -140,6 +140,7 @@ a, p, h1, h3, figcaption, em, li{
 #neighbors{
   color: #fff949;
   text-shadow: 2px 2px 4px #8400ff;
+  margin-bottom: 2%;
 }
 .Hotlist {
   position: relative;
@@ -232,6 +233,10 @@ h3{
 }
 .neighborbutton p:hover{
   transform: rotateZ(-5deg);
+}
+#MelankorinButton{
+  color: rgb(203, 229, 229);
+  text-shadow: 1px 1px 4px teal;
 }
 
 /* Tablet Mode */
