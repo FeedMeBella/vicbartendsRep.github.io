@@ -903,6 +903,10 @@ a, p, h1, figcaption, em, li{
   0% { filter: brightness(1); }
   100% { filter: brightness(1.0001); }
 } /* I hate it that I need this grrrr firefox help me out here */
+@keyframes firefoxwakeupHover {
+  0% { filter: drop-shadow(0px 0px 5px rgb(255, 255, 255)) brightness(1); }
+  100% { filter: drop-shadow(0px 0px 5px rgb(255, 255, 255)) brightness(1.0001); }
+} /* This makes it twice as stupid btw. */
 .satellite{
   --rotation: 30deg;
   position: fixed;
@@ -943,7 +947,8 @@ a, p, h1, figcaption, em, li{
   animation: revolve 90s linear infinite, firefoxwakeup 0.01s linear infinite;
 }
 .satellite img:hover{ 
- filter: drop-shadow(0px 0px 5px #ffffff);
+  filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+  animation: revolve 90s linear infinite, firefoxwakeupHover 0.01s linear infinite;
 }
 #sat1  { --angle-start: 0deg; }
 #sat2  { --angle-start: 12deg; }
