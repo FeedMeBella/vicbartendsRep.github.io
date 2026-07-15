@@ -198,7 +198,7 @@ h3{
   left: 50%;
   transform: translateX(-50%);
 }
-#DYKENET:hover, #OffPlatform:hover{
+#DYKENET:hover, #AOLW:hover{
   filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
   -webkit-filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
 }
