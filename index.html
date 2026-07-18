@@ -478,7 +478,7 @@
       MTTL.forEach(MTTL => MTTL.style = "opacity: 1");
       MTLK.forEach(MTLK => MTLK.style = "opacity: 1");
       MTDvela.style = "opacity: 0";
-      BGTVela.src = "./assets/VelaFlip.gif";
+      BGTVela.src = `./assets/VelaFlip.gif?v=${performance.now()}`; // Firefox fix to make it reload the gif everytime cuz it stopped working why firefox why.
       finalVelaTime = setTimeout(() => {BGTVela.src = "./assets/Vela_tracklist.png";}, 1440);
 
       stage++;
