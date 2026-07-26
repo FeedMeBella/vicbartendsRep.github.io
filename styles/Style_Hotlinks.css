@@ -311,6 +311,13 @@ h3{
   .neighborbutton p{
     width: 100dvw;
   }
+    #OffPlatform{
+    top: 19%;
+    margin-bottom: 4%;
+  }
+  #AOLW img{
+    top: 117%;
+  }
 }
 
 /* scrolbar */
