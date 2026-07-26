@@ -190,7 +190,8 @@ h3{
   flex-direction: row;
   justify-content: center;
   width: 100vw;
-  top: 15%;
+  top: 19%;
+  margin-bottom: 2.5%;
 }
 #AOLW img{
   position: relative;
@@ -199,7 +200,7 @@ h3{
   left: 50%;
   transform: translateX(-50%);
 }
-#DYKENET:hover, #AOLW:hover{
+#DYKENET:hover, #AOLW:hover, #OffPlatform:hover{
   filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
   -webkit-filter: drop-shadow(rgb(255, 232, 232) 1px 0px 2px);
 }
