@@ -120,6 +120,7 @@ a, p, h1, h3, figcaption, em, li{
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: linear-gradient(100deg, #7b00ff, #68ff5a);
   border: none;
+  cursor: pointer;
 }
 .randombutton:hover {
   background: linear-gradient(135deg, #ff0000, #04ffff);
