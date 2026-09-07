@@ -143,21 +143,29 @@ a, p, h1, figcaption, em, li{
     top: 2%;
   }
   .back2index img{
-    height: 13vh;
+    height: 13dvh;
   }
   #EXTRA-LOGO {
-    height: 16vh;
+    height: 16dvh;
+  }
+  .Extras-scroll {
+    height: 84dvh;
   }
   #EXTRA-LOGO img{
     top: 1%;
   }
   .Extras-wrapper {
     height: 80dvh;
-    
   }
   .Extras-item {
     flex: 0 1 calc(43%); /* 2 per row on smaller screens  Again with this?? Crazy*/
     max-height: 30%;
+  }
+  .Extras-title{
+    font-size: 2.5dvw;
+  }
+  .Extras-description{
+    font-size: 1.5dvw;
   }
 }
 
@@ -166,11 +174,21 @@ a, p, h1, figcaption, em, li{
   #EXTRA-LOGO{
     height: 26dvw;
   }
+  
   .back2index{
     top: 1%;
   }
   .back2index img{
     height: 22vw;
+  }
+  .Extras-scroll {
+    height: calc(100dvh - 26dvw);
+  }
+  .Extras-title{
+    font-size: 4.8dvw;
+  }
+  .Extras-description{
+    font-size: 3.5dvw;
   }
 }
 
