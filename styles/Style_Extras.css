@@ -84,7 +84,7 @@ a, p, h1, figcaption, em, li{
 .Extras-wrapper {
   position: absolute;
   left: 50%;
-  top: 80%;
+  top: 73%;
   transform: translate(-50%, -50%);
   bottom: 0;
   width: 100%;
@@ -149,18 +149,15 @@ a, p, h1, figcaption, em, li{
   #EXTRA-LOGO {
     height: 16dvh;
   }
-  .Extras-scroll {
-    height: 84dvh;
-  }
   #EXTRA-LOGO img{
     top: 1%;
   }
-  .Extras-wrapper {
-    height: 80dvh;
+  .Extras-wrapper { 
+    top: 68%;
   }
   .Extras-item {
     flex: 0 1 calc(43%); /* 2 per row on smaller screens  Again with this?? Crazy*/
-    max-height: 30%;
+    max-height: 40%;
   }
   .Extras-title{
     font-size: 2.5dvw;
@@ -175,18 +172,17 @@ a, p, h1, figcaption, em, li{
   #EXTRA-LOGO{
     height: 26dvw;
   }
-  
   .back2index{
     top: 1%;
   }
   .back2index img{
     height: 22vw;
   }
-  .Extras-scroll {
-    height: calc(100dvh - 26dvw);
-  }
   .Extras-title{
     font-size: 4.8dvw;
+  }
+  .Extras-item {
+    max-height: 20%;
   }
   .Extras-description{
     font-size: 3.5dvw;
