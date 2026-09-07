@@ -58,7 +58,7 @@ a, p, h1, figcaption, em, li{
 }
 #EXTRA-LOGO {
   top:0%;
-  background: linear-gradient(0deg,rgba(122, 176, 83, 0) 0%, rgba(122, 176, 83, 0.6) 7%, rgba(122, 176, 83, 0.6) 100%);
+  background: linear-gradient(0deg,rgba(122, 176, 83, 0) 0%, rgba(133, 191, 91, 0.6) 7%, rgba(133, 191, 91, 0.6) 100%);
   transition: height 0.1s ease;
   z-index: 10;
 }
