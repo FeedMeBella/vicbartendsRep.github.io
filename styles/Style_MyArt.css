@@ -611,6 +611,11 @@ a, p, h1, figcaption, em, li{
   bottom: 52%;
   left: 25dvh;
 }
+#png7{
+  height: 9%;
+  bottom: 62%;
+  left: 4.5dvh;
+}
 
 /* Program */
 .hide{
@@ -1429,6 +1434,12 @@ a, p, h1, figcaption, em, li{
     bottom: 40dvw;
     left: 39%;
   }
+  #png7{
+    width: 12%;
+    height: auto;
+    bottom: 48dvw;
+    left: 8%;
+  }
   .tbicons{
     left: 22dvh;
   }
@@ -1527,6 +1538,9 @@ a, p, h1, figcaption, em, li{
   }
   #png6{
     bottom: 58dvw;
+  }
+  #png7{
+    bottom: 70dvw;
   }
   .sitenews{
     width: 70dvw;
