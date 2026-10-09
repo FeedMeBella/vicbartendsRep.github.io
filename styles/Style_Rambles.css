@@ -100,22 +100,23 @@ pre {
 }
 .divider{
   text-align: center;
-  margin: 1rem;
-  font-size: 2dvw;
+  margin: 3dvh;
+  font-size: 2.1dvw;
   text-shadow: 0dvh 0.6dvh rgb(239, 122, 204);
 }
 .rambleheader{
-  margin: 4dvh 10dvh;
-  font-size: 0.9rem;
+  margin: 2dvh 13dvw;
+  font-size: 1.6dvh;
   font-family: monospace;
+  text-wrap: unset;
 }
 .ramble p{
-  margin: 1.5dvh 4dvh;
-  font-size: 1.3rem;
+  margin: 1.5dvh 10dvw;
+  font-size: 2.5dvh;
   font-weight: 500;
   text-indent: 2rem;
   font-family: 'Garamond';
-  text-shadow: -1px 2px 2px rgba(150, 83, 144, 0.453);
+  text-shadow: 0px 0px 0.25rem rgba(255, 213, 250, 0.993);
 }
 
 html::-webkit-scrollbar {
@@ -145,7 +146,7 @@ html::-webkit-scrollbar-thumb:hover {
   .ramble p{
     margin-left: 1.5dvh;
     margin-right: 1.5dvh;
-    font-size: 1rem;
+    font-size: 2.2dvh;
   }
   .divider{
     font-size: 2.9dvw;
