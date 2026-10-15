@@ -1029,6 +1029,7 @@ a, p, h1, figcaption, em, li{
 }
 .topborder img{
   position: absolute;
+  cursor: pointer;
   top: 50%;
   left: 1dvh;
   transform: translateY(-50%);
